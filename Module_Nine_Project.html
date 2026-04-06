@@ -1,0 +1,1237 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    
+    
+    
+    
+
+
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h1>Module Nine Project<a rel="noopener" class="anchor-link" href="#Module-Nine-Project">&#182;</a></h1><p>For the module nine project you are required to produce coding samples in accordance with the requirements in the project guidelines and rubric. This Notebook has been pre-created as a shell for your project submission.</p>
+<p>Once your code is complete, you will download this notebook as an HTML file by clicking <strong>File</strong>, then <strong>Download As</strong>, then <strong>HTML (.html)</strong> from the Jupyter menu bar. Validate that your code and outputs are rendered in the html file before submission.</p>
+<div class="alert alert-block alert-danger">
+    <span style="color:black;"><b><i>Missing Blocks:</i></b> Ensure that you have clicked <b><mark>Run</mark></b> for all blocks before downloading as an HTML file or the block may be missing from your submission.</span>
+</div>
+<h3>Data Source Information<a rel="noopener" class="anchor-link" href="#Data-Source-Information">&#182;</a></h3><p>Below are some example reputable data sources that you can use to collect your minimum of two data sets from:</p>
+<ul>
+<li><a rel="noopener" href="https://datasetsearch.research.google.com/">https://datasetsearch.research.google.com/</a></li>
+<li><a rel="noopener" href="https://www.kaggle.com/datasets">https://www.kaggle.com/datasets</a></li>
+<li><a rel="noopener" href="https://data.gov/">https://data.gov/</a></li>
+<li><a rel="noopener" href="https://www.census.gov/data.html">https://www.census.gov/data.html</a></li>
+<li><a rel="noopener" href="https://www.bls.gov/data/">https://www.bls.gov/data/</a></li>
+<li><a rel="noopener" href="https://databank.worldbank.org/databases">https://databank.worldbank.org/databases</a></li>
+<li><a rel="noopener" href="https://www.ncei.noaa.gov/access/search/index">https://www.ncei.noaa.gov/access/search/index</a></li>
+<li><a rel="noopener" href="https://www.epa.gov/data">https://www.epa.gov/data</a></li>
+<li><a rel="noopener" href="https://www.pewresearch.org/tools-and-datasets/">https://www.pewresearch.org/tools-and-datasets/</a></li>
+<li><a rel="noopener" href="https://www.who.int/data/">https://www.who.int/data/</a></li>
+<li><a rel="noopener" href="https://dataverse.harvard.edu/">https://dataverse.harvard.edu/</a></li>
+<li><a rel="noopener" href="https://search.cdc.gov/search/?query=dataset&amp;dpage=1">https://search.cdc.gov/search/?query=dataset&amp;dpage=1</a></li>
+<li><a rel="noopener" href="https://data.fivethirtyeight.com/">https://data.fivethirtyeight.com/</a></li>
+<li><a rel="noopener" href="https://www.gdeltproject.org/data.html">https://www.gdeltproject.org/data.html</a></li>
+<li><a rel="noopener" href="https://datahub.io/collections">https://datahub.io/collections</a></li>
+</ul>
+<p>*<strong>Note: this list is not all inclusive, if you have a reputable data set that you have collected, or would like to use, please ensure to upload the data. All data sets will need to be documented in your submission as to the source through the creation of a citation.</strong>*</p>
+<div class="alert alert-block alert-success">
+    <span style="color:black;"><b><i>To Begin:</i></b> replace each <b>data_file_#</b> entry sample data path with the path to your selected data sets.</span>
+</div>
+<p>You are welcome to use more than two data sets, create an entry for each as applicable for each data set. Ensure that you create comments that provide citations for the data sets you have selected for use. When working through your submission, keep in mind that you will need to have choosen two separate groups of stakeholders to create your final visualizations.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Placeholder for data citation information</span>
+<span class="n">data_file_1</span> <span class="o">=</span> <span class="s2">&quot;Federal Transit Administration, National Transit Database (2023)&quot;</span>
+<span class="n">data_file_2</span> <span class="o">=</span> <span class="s2">&quot;U.S. Census Bureau QuickFacts, 2024 county population estimates&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Source 1:&quot;</span><span class="p">,</span> <span class="n">data_file_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Source 2:&quot;</span><span class="p">,</span> <span class="n">data_file_2</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Source 1: Federal Transit Administration, National Transit Database (2023)
+Source 2: U.S. Census Bureau QuickFacts, 2024 county population estimates
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Installing Required Packages<a rel="noopener" class="anchor-link" href="#Installing-Required-Packages">&#182;</a></h2><p>If you have additional packages that you would like to use or install, add them to the <strong>requirements.txt</strong> file then run the next two blocks.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Requirement already satisfied: pip in /home/codio/.pyenv/versions/3.11.2/lib/python3.11/site-packages (26.0.1)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Import the Required Packages<a rel="noopener" class="anchor-link" href="#Import-the-Required-Packages">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Loading the Data<a rel="noopener" class="anchor-link" href="#Loading-the-Data">&#182;</a></h2><p>Create entries to load your data for your submission.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Transit agency data from 2023 FTA annual agency profiles</span>
+<span class="n">transit_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Agency&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;King County Metro&quot;</span><span class="p">,</span> <span class="s2">&quot;Spokane Transit Authority&quot;</span><span class="p">,</span> <span class="s2">&quot;City of Longview&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;County&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;King County&quot;</span><span class="p">,</span> <span class="s2">&quot;Spokane County&quot;</span><span class="p">,</span> <span class="s2">&quot;Cowlitz County&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">78886848</span><span class="p">,</span> <span class="mi">9403739</span><span class="p">,</span> <span class="mi">274804</span><span class="p">],</span>
+    <span class="s2">&quot;Operating_Expenses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">928431425</span><span class="p">,</span> <span class="mi">108354435</span><span class="p">,</span> <span class="mi">5877217</span><span class="p">],</span>
+    <span class="s2">&quot;Profile_Population&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3544011</span><span class="p">,</span> <span class="mi">447279</span><span class="p">,</span> <span class="mi">69841</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># County population estimates from 2024 U.S. Census QuickFacts</span>
+<span class="n">population_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;County&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;King County&quot;</span><span class="p">,</span> <span class="s2">&quot;Spokane County&quot;</span><span class="p">,</span> <span class="s2">&quot;Cowlitz County&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;County_Population_2024&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2340211</span><span class="p">,</span> <span class="mi">555947</span><span class="p">,</span> <span class="mi">113982</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">transit_df</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">population_df</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Agency</th>
+      <th>County</th>
+      <th>Annual_Unlinked_Trips</th>
+      <th>Operating_Expenses</th>
+      <th>Profile_Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>King County Metro</td>
+      <td>King County</td>
+      <td>78886848</td>
+      <td>928431425</td>
+      <td>3544011</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Spokane Transit Authority</td>
+      <td>Spokane County</td>
+      <td>9403739</td>
+      <td>108354435</td>
+      <td>447279</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>City of Longview</td>
+      <td>Cowlitz County</td>
+      <td>274804</td>
+      <td>5877217</td>
+      <td>69841</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>County</th>
+      <th>County_Population_2024</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>King County</td>
+      <td>2340211</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Spokane County</td>
+      <td>555947</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Cowlitz County</td>
+      <td>113982</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Examining the Data<a rel="noopener" class="anchor-link" href="#Examining-the-Data">&#182;</a></h2><p>Create entries to conduct exploratory data analysis to identify key data points to include relevant data from your two data sets while evaluating the quality of your choosen data.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Transit data info:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">transit_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Population data info:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">population_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Transit data descriptive statistics:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">transit_df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Population data descriptive statistics:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">population_df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Missing values in transit data:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">transit_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Missing values in population data:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">population_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Transit data info:
+
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column                 Non-Null Count  Dtype 
+---  ------                 --------------  ----- 
+ 0   Agency                 3 non-null      object
+ 1   County                 3 non-null      object
+ 2   Annual_Unlinked_Trips  3 non-null      int64 
+ 3   Operating_Expenses     3 non-null      int64 
+ 4   Profile_Population     3 non-null      int64 
+dtypes: int64(3), object(2)
+memory usage: 252.0+ bytes
+
+Population data info:
+
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 2 columns):
+ #   Column                  Non-Null Count  Dtype 
+---  ------                  --------------  ----- 
+ 0   County                  3 non-null      object
+ 1   County_Population_2024  3 non-null      int64 
+dtypes: int64(1), object(1)
+memory usage: 180.0+ bytes
+
+Transit data descriptive statistics:
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Agency</th>
+      <th>County</th>
+      <th>Annual_Unlinked_Trips</th>
+      <th>Operating_Expenses</th>
+      <th>Profile_Population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>3</td>
+      <td>3</td>
+      <td>3.00</td>
+      <td>3.00</td>
+      <td>3.00</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>3</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>King County Metro</td>
+      <td>King County</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>29,521,797.00</td>
+      <td>347,554,359.00</td>
+      <td>1,353,710.33</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>42,994,366.59</td>
+      <td>505,657,017.56</td>
+      <td>1,906,220.77</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>274,804.00</td>
+      <td>5,877,217.00</td>
+      <td>69,841.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4,839,271.50</td>
+      <td>57,115,826.00</td>
+      <td>258,560.00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>9,403,739.00</td>
+      <td>108,354,435.00</td>
+      <td>447,279.00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>44,145,293.50</td>
+      <td>518,392,930.00</td>
+      <td>1,995,645.00</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>78,886,848.00</td>
+      <td>928,431,425.00</td>
+      <td>3,544,011.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>
+Population data descriptive statistics:
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>County</th>
+      <th>County_Population_2024</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>3</td>
+      <td>3.00</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>King County</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>NaN</td>
+      <td>1,003,380.00</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>NaN</td>
+      <td>1,178,631.03</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>NaN</td>
+      <td>113,982.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>NaN</td>
+      <td>334,964.50</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>NaN</td>
+      <td>555,947.00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>NaN</td>
+      <td>1,448,079.00</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>NaN</td>
+      <td>2,340,211.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>
+Missing values in transit data:
+
+Agency                   0
+County                   0
+Annual_Unlinked_Trips    0
+Operating_Expenses       0
+Profile_Population       0
+dtype: int64
+
+Missing values in population data:
+
+County                    0
+County_Population_2024    0
+dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Data Quality Evaluation<a rel="noopener" class="anchor-link" href="#Data-Quality-Evaluation">&#182;</a></h3><p>The datasets were examined using summary statistics and structure analysis. Both datasets contain consistent formatting, and key fields such as transit ridership, operating expenses, and population are properly structured for analysis. Missing values are minimal and do not significantly impact the analysis. Overall, the data is reliable and suitable for integration and further exploration.The absence of missing values across all variables further confirms the reliability of the dataset and reduces the need for imputation or data correction.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Examine structure of datasets</span>
+<span class="n">transit_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">population_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+
+<span class="c1"># Check for missing values in each dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Missing values in transit data:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">transit_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Missing values in population data:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">population_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column                 Non-Null Count  Dtype 
+---  ------                 --------------  ----- 
+ 0   Agency                 3 non-null      object
+ 1   County                 3 non-null      object
+ 2   Annual_Unlinked_Trips  3 non-null      int64 
+ 3   Operating_Expenses     3 non-null      int64 
+ 4   Profile_Population     3 non-null      int64 
+dtypes: int64(3), object(2)
+memory usage: 252.0+ bytes
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 2 columns):
+ #   Column                  Non-Null Count  Dtype 
+---  ------                  --------------  ----- 
+ 0   County                  3 non-null      object
+ 1   County_Population_2024  3 non-null      int64 
+dtypes: int64(1), object(1)
+memory usage: 180.0+ bytes
+
+Missing values in transit data:
+
+Agency                   0
+County                   0
+Annual_Unlinked_Trips    0
+Operating_Expenses       0
+Profile_Population       0
+dtype: int64
+
+Missing values in population data:
+
+County                    0
+County_Population_2024    0
+dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Data Preprocessing Techniques<a rel="noopener" class="anchor-link" href="#Data-Preprocessing-Techniques">&#182;</a></h2><p>Create entries to clean and blend your data sets as applicable consolidating the two or more data sets into a single collection for inclusion into your visualizations.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Standardize text fields</span>
+<span class="n">transit_df</span><span class="p">[</span><span class="s2">&quot;Agency&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">transit_df</span><span class="p">[</span><span class="s2">&quot;Agency&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">transit_df</span><span class="p">[</span><span class="s2">&quot;County&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">transit_df</span><span class="p">[</span><span class="s2">&quot;County&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">population_df</span><span class="p">[</span><span class="s2">&quot;County&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">population_df</span><span class="p">[</span><span class="s2">&quot;County&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="c1"># Ensure numeric columns are numeric</span>
+<span class="n">numeric_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">,</span> <span class="s2">&quot;Operating_Expenses&quot;</span><span class="p">,</span> <span class="s2">&quot;Profile_Population&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numeric_cols</span><span class="p">:</span>
+    <span class="n">transit_df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">transit_df</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+
+<span class="n">population_df</span><span class="p">[</span><span class="s2">&quot;County_Population_2024&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">population_df</span><span class="p">[</span><span class="s2">&quot;County_Population_2024&quot;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+
+<span class="c1"># Blend the datasets</span>
+<span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">transit_df</span><span class="p">,</span> <span class="n">population_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;County&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create derived metrics for deeper analysis</span>
+<span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Expense_Per_Trip&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Operating_Expenses&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">]</span>
+<span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Trips_Per_Resident&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;County_Population_2024&quot;</span><span class="p">]</span>
+<span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Operating_Expenses_Millions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Operating_Expenses&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1_000_000</span>
+<span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Trips_Millions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1_000_000</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Integrated data set preview:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">merged_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>
+Integrated data set preview:
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Agency</th>
+      <th>County</th>
+      <th>Annual_Unlinked_Trips</th>
+      <th>Operating_Expenses</th>
+      <th>Profile_Population</th>
+      <th>County_Population_2024</th>
+      <th>Expense_Per_Trip</th>
+      <th>Trips_Per_Resident</th>
+      <th>Operating_Expenses_Millions</th>
+      <th>Trips_Millions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>King County Metro</td>
+      <td>King County</td>
+      <td>78886848</td>
+      <td>928431425</td>
+      <td>3544011</td>
+      <td>2340211</td>
+      <td>11.77</td>
+      <td>33.71</td>
+      <td>928.43</td>
+      <td>78.89</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Spokane Transit Authority</td>
+      <td>Spokane County</td>
+      <td>9403739</td>
+      <td>108354435</td>
+      <td>447279</td>
+      <td>555947</td>
+      <td>11.52</td>
+      <td>16.91</td>
+      <td>108.35</td>
+      <td>9.40</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>City of Longview</td>
+      <td>Cowlitz County</td>
+      <td>274804</td>
+      <td>5877217</td>
+      <td>69841</td>
+      <td>113982</td>
+      <td>21.39</td>
+      <td>2.41</td>
+      <td>5.88</td>
+      <td>0.27</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Data Visualizations<a rel="noopener" class="anchor-link" href="#Data-Visualizations">&#182;</a></h2><p>Create entries to visualize your data using appropriate visualization types to reveal key trends within the data collection. Integrate multiple data attributes into visualizations using appropriate techniques to derive key insights from your visualizations. In your data visualizations, you will use multi-level data modeling practices to refine your visualizations. Your visualizations should include a high-level visualization that provides a broad overview of the data for one of your two stakeholders, as well as a detailed, insight-focused visualization that highlights the key findings for the other of your two stakeholders.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># High-level visualization for executive leadership</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Agency&quot;</span><span class="p">],</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Trips_Millions&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Annual Unlinked Passenger Trips by Agency (2023)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Transit Agency&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Trips (Millions)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Trips_Millions&quot;</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output">
+<img src="javascript://"/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>High-Level Visualization for Executive Stakeholders<a rel="noopener" class="anchor-link" href="#High-Level-Visualization-for-Executive-Stakeholders">&#182;</a></h3><p>The bar chart provides a simplified overview of transit ridership across agencies, allowing executive stakeholders to quickly compare performance. By presenting trips in millions and labeling each bar, the visualization emphasizes key differences without overwhelming detail. This approach supports high-level decision making by clearly identifying which agencies serve the largest number of passengers.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Detailed visualization for planners and analysts</span>
+
+<span class="c1"># Create a figure with a readable size</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Create a scatter plot where:</span>
+<span class="c1"># x-axis = county population</span>
+<span class="c1"># y-axis = annual unlinked trips</span>
+<span class="c1"># bubble size = operating expenses in millions</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;County_Population_2024&quot;</span><span class="p">],</span>
+    <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">],</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Operating_Expenses_Millions&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span><span class="p">,</span>   <span class="c1"># scaled down to avoid oversized bubbles</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="p">)</span>
+
+<span class="c1"># Add agency labels next to each point</span>
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">merged_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+        <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Agency&quot;</span><span class="p">],</span>
+        <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;County_Population_2024&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">]),</span>
+        <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+        <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span>
+    <span class="p">)</span>
+
+<span class="c1"># Add chart title and axis labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ridership, Population, and Operating Expenses&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;County Population Estimate (2024)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Annual Unlinked Passenger Trips (2023)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add padding around the data so bubbles are not cut off at the edges</span>
+<span class="n">x_min</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;County_Population_2024&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">x_max</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;County_Population_2024&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">y_min</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">x_min</span> <span class="o">-</span> <span class="p">(</span><span class="n">x_max</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">x_max</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">y_min</span> <span class="o">-</span> <span class="p">(</span><span class="n">y_max</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">y_max</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">)</span>
+
+<span class="c1"># Improve spacing so labels and titles fit neatly</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Display the visualization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output">
+<img src="javascript://"/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Detailed Visualization for Analysts and Planners<a rel="noopener" class="anchor-link" href="#Detailed-Visualization-for-Analysts-and-Planners">&#182;</a></h3><p>This scatter plot provides a detailed, multi-variable view of transit performance across agencies. The visualization integrates three key data attributes: county population (x-axis), annual ridership (y-axis), and operating expenses (represented by bubble size). This allows for a deeper analysis of how population size relates to transit usage while also considering cost.</p>
+<p>Adjustments were made to the axis ranges and bubble sizes to ensure that all data points are fully visible and not cut off at the edges. This improves clarity and prevents distortion of the data, especially for agencies with significantly higher values.</p>
+<p>From this visualization, it is clear that King County Metro serves a substantially larger population and has much higher ridership compared to the other agencies. Spokane Transit Authority falls in the middle, while the City of Longview has significantly lower values across all metrics. This detailed view helps analysts evaluate efficiency, demand, and resource allocation across different transit systems.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Optional supporting comparison table</span>
+<span class="n">summary_table</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[[</span>
+    <span class="s2">&quot;Agency&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;County&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Operating_Expenses&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;County_Population_2024&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Expense_Per_Trip&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Trips_Per_Resident&quot;</span>
+<span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;Annual_Unlinked_Trips&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Summary table of key insights:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">summary_table</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>
+Summary table of key insights:
+
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Agency</th>
+      <th>County</th>
+      <th>Annual_Unlinked_Trips</th>
+      <th>Operating_Expenses</th>
+      <th>County_Population_2024</th>
+      <th>Expense_Per_Trip</th>
+      <th>Trips_Per_Resident</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>King County Metro</td>
+      <td>King County</td>
+      <td>78886848</td>
+      <td>928431425</td>
+      <td>2340211</td>
+      <td>11.77</td>
+      <td>33.71</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Spokane Transit Authority</td>
+      <td>Spokane County</td>
+      <td>9403739</td>
+      <td>108354435</td>
+      <td>555947</td>
+      <td>11.52</td>
+      <td>16.91</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>City of Longview</td>
+      <td>Cowlitz County</td>
+      <td>274804</td>
+      <td>5877217</td>
+      <td>113982</td>
+      <td>21.39</td>
+      <td>2.41</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Summary Table of Key Insights<a rel="noopener" class="anchor-link" href="#Summary-Table-of-Key-Insights">&#182;</a></h3><p>The summary table provides a consolidated view of key performance metrics across transit agencies, including ridership, operating expenses, population, and derived efficiency measures. Organizing the data in this format allows for direct comparison between agencies and supports deeper analysis beyond visualizations.</p>
+<p>From the table, it is evident that King County Metro significantly outperforms the other agencies in both total ridership and operating expenses, reflecting its larger population base and higher demand for transit services. Spokane Transit Authority demonstrates moderate performance, while the City of Longview operates on a much smaller scale.</p>
+<p>Also, derived metrics such as expense per trip and trips per resident offer insight into efficiency and service utilization. These measures help stakeholders evaluate how effectively resources are being used and identify potential opportunities for optimization.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math, .d2l-element, .d2l-cplus-layout') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
+							const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
+							elm.replaceWith(mrow);
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							outputScale: 1.5,
+							renderLatex: false,
+							enableMML3Support: false
+						});
+					}
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code, false);
+					});
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					window.D2L.EmbedRenderer.renderEmbeds(document.body);
+				});</script></body></html>

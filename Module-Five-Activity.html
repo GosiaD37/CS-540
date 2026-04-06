@@ -1,0 +1,1677 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    
+    
+    
+    
+
+
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h1>Module Five Activity<a rel="noopener" class="anchor-link" href="#Module-Five-Activity">&#182;</a></h1><p>For the module five activity, you will write Python code to create clear and informative data visualizations from the provided data set <code>Most-Recent-Cohorts-Field-of-Study.csv</code>. Your code should be well-organized and reflect a clear understanding of each step in the visualization process.</p>
+<div class="alert alert-block alert-danger">
+    <span style="color:black;"><b><i>Note:</i></b> there are two parts to this assignment. Part One is the data visualization coding activity. Part Two is the reflection paper.</span>
+</div>
+<p>Once your code is complete, you will download this notebook as an HTML file by clicking <strong>File</strong>, then <strong>Download As</strong>, then <strong>HTML (.html)</strong> from the Jupyter menu bar. Validate that your code, output, and all six visualizations (rendered as images using the display() function) are visible in the html file before submission.</p>
+<div class="alert alert-block alert-danger">
+    <span style="color:black;"><b><i>Missing Blocks:</i></b> Ensure that you have clicked <b><mark>Run</mark></b> for all blocks before downloading as an HTML file or the block may be missing from your submission. <b>Images</b> must be called using the <b><i>display()</i></b> function, for example: <b><mark>display(Image(filename=&quot;output/{image_name}.png&quot;))</mark></b></span>
+</div>
+<p>Specifically, you must address the items from the rubric criteria.</p>
+<h3>Part One: Data Visualization<a rel="noopener" class="anchor-link" href="#Part-One:-Data-Visualization">&#182;</a></h3><h4>Prepare the given data set for visualization. Consider the following:<a rel="noopener" class="anchor-link" href="#Prepare-the-given-data-set-for-visualization.-Consider-the-following:">&#182;</a></h4><ul>
+<li>Are there any columns you can remove?</li>
+<li>Are filters or groupings needed?</li>
+<li>Are the data values structured for your chart types?</li>
+</ul>
+<h4>Clean the given data set for visualization using Python. Consider the following:<a rel="noopener" class="anchor-link" href="#Clean-the-given-data-set-for-visualization-using-Python.-Consider-the-following:">&#182;</a></h4><ul>
+<li>Are there any missing or invalid values?</li>
+<li>Are there any unclear column names?</li>
+<li>Are the data types correct for each column (e.g., numeric, categorical, datetime)?</li>
+</ul>
+<h4>Create multiple types of visualizations using Python.  Include the following:<a rel="noopener" class="anchor-link" href="#Create-multiple-types-of-visualizations-using-Python.--Include-the-following:">&#182;</a></h4><ul>
+<li>Dendrogram</li>
+<li>PCA scatterplot</li>
+<li>Cluster size distribution</li>
+<li>Feature importance heatmap</li>
+<li>Trend chart</li>
+<li>Scatterplot</li>
+</ul>
+<div class="alert alert-block alert-danger">
+    <span style="color:black;"><b><i>Note:</i></b> You will need to ensure that you have created at least one of each of the visual types listed above.</span>
+</div>
+<h3>Part 2: Reflection<a rel="noopener" class="anchor-link" href="#Part-2:-Reflection">&#182;</a></h3><p><i>This part is to be completed in a word document, using the output here to answer the topics.</i></p>
+<h4>Identify patterns in the data. Consider the following:<a rel="noopener" class="anchor-link" href="#Identify-patterns-in-the-data.-Consider-the-following:">&#182;</a></h4><ul>
+<li>Are there any clear trends, clusters, or outliers visible in your visualizations?</li>
+<li>Are certain variables showing consistent behavior or relationships?</li>
+<li>Are the patterns similar across different visualization types?</li>
+</ul>
+<h4>Draw conclusions from the patterns. Consider the following:<a rel="noopener" class="anchor-link" href="#Draw-conclusions-from-the-patterns.-Consider-the-following:">&#182;</a></h4><ul>
+<li>Are your conclusions clearly based on the patterns you observed?</li>
+<li>Are your findings supported by multiple visuals or data points?</li>
+</ul>
+<h4>Explain how the visualizations validate your findings. Consider the following:<a rel="noopener" class="anchor-link" href="#Explain-how-the-visualizations-validate-your-findings.-Consider-the-following:">&#182;</a></h4><ul>
+<li>Are specific chart elements (e.g., color, scale, labels) helping to highlight your findings?</li>
+<li>Are the insights you found something you could not easily see without the visuals?</li>
+</ul>
+<h4>Write a summary of the visualization choices you made. Include the following:<a rel="noopener" class="anchor-link" href="#Write-a-summary-of-the-visualization-choices-you-made.-Include-the-following:">&#182;</a></h4><ul>
+<li>An explanation of the types of charts you used</li>
+<li>An explanation of the formatting decisions to support visual clarity</li>
+</ul>
+<div class="alert alert-block alert-success">
+    <span style="color:black;"><b><i>To Begin:</i></b> This Python template program has been broken down into segments as a guide for what steps you should do at a minimum to complete this activity. Look for the <b># To Do:</b> comments. These are placeholders for you to provide Python code segments. Fill out all <b># To Do:</b> code segments to complete this program.</span><br/><br/>
+    <span style="color:black;"><b><i>Once Complete:</i></b> Execute a &quot;Kernel restart and run all&quot; to verify that all your code works as a single unit by clicking <b>Kernel</b>, then <b>Restart &amp; Run All</b> before downloading as html.</span>
+</div>
+<div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hint:</i></b> If you need to install additional packages, see one of the earlier modules on how to configure and call a requirements.txt file.</span>
+</div>
+<h2>Import the Required Packages<a rel="noopener" class="anchor-link" href="#Import-the-Required-Packages">&#182;</a></h2><ul>
+<li><strong>pandas (pd):</strong> For reading and manipulating the dataset.</li>
+<li><strong>MinMaxScaler:</strong> A preprocessing tool from sklearn to normalize data values between 0 and 1.</li>
+<li><strong>PCA:</strong> Principal Component Analysis (dimensionality reduction) from sklearn for visualizing clusters in 2D.</li>
+<li><strong>dendrogram, linkage, fcluster:</strong> Tools from scipy for performing hierarchical clustering and visualizing its results.</li>
+<li><strong>matplotlib.pyplot (plt):</strong> For creating charts and saving visuals.</li>
+<li><strong>seaborn (sns):</strong> For advanced and visually appealing charts.</li>
+<li><strong>numpy (np):</strong> For numerical operations like arrays and aggregations.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>   <span class="c1"># for reading &amp; manipulating the dataset</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>    <span class="c1"># a preprocessing tool from sklearn to normalize data values</span>
+                                                                                    <span class="c1"># between 0 and 1</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>  <span class="c1"># Principal Component Analysis (dimensionality reduction) from </span>
+                                                                   <span class="c1"># sklearn for visualizing clusters in 2D</span>
+<span class="kn">from</span> <span class="nn">scipy.cluster.hierarchy</span> <span class="kn">import</span> <span class="n">dendrogram</span><span class="p">,</span> <span class="n">linkage</span><span class="p">,</span> <span class="n">fcluster</span>    <span class="c1"># tools from scipy for performing hierarchical clustering &amp; visualizing its results</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>     <span class="c1">#  for creating charts &amp; saving visuals</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>    <span class="c1">#  for advanced &amp; visually appealing charts</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>      <span class="c1"># for numerical operations like arrays &amp; aggregations</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span> <span class="c1"># for image rendering in html output</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h1>Part One: Data Visualization<a rel="noopener" class="anchor-link" href="#Part-One:-Data-Visualization">&#182;</a></h1><h2>Loading the Data<a rel="noopener" class="anchor-link" href="#Loading-the-Data">&#182;</a></h2><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> Use <b><mark>pd.read_csv</mark></b> to read a CSV file and load it into a DataFrame (data). Use <b><mark>try block</mark></b> to ensures the program handles errors gracefully if the file cannot be loaded (e.g., missing or incorrect path). Use <b><mark>exit()</mark></b> to stop the program if an error occurs.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[37]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading dataset...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Use the given dataset named &quot;Most-Recent-Cohorts-Field-of-Study.csv&quot; for this assignment</span>
+<span class="c1"># Load this dataset</span>
+<span class="c1"># For secure coding, put this action in a try/catch block</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;data/Most-Recent-Cohorts-Field-of-Study.csv&quot;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataset loaded successfully.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Path: </span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rows: </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> | Columns: </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File not found: </span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">raise</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Error loading dataset:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Loading dataset...
+Dataset loaded successfully.
+Path: data/Most-Recent-Cohorts-Field-of-Study.csv
+Rows: 229,188 | Columns: 174
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Display Dataset Information<a rel="noopener" class="anchor-link" href="#Display-Dataset-Information">&#182;</a></h2><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> Use <b><mark>data.columns.tolist()</mark></b> to extract and print all column names. Use <b><mark>data.index.tolist()</mark></b> to show the index values of the dataset (e.g., row numbers). Use <b><mark>data.head()</mark></b> to display the top 5 rows to give an overview of the data.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column Names:&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Print all column names</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total columns: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error printing column names:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Column Names:
+[&#39;UNITID&#39;, &#39;OPEID6&#39;, &#39;INSTNM&#39;, &#39;CONTROL&#39;, &#39;MAIN&#39;, &#39;CIPCODE&#39;, &#39;CIPDESC&#39;, &#39;CREDLEV&#39;, &#39;CREDDESC&#39;, &#39;IPEDSCOUNT1&#39;, &#39;IPEDSCOUNT2&#39;, &#39;DEBT_ALL_STGP_ANY_N&#39;, &#39;DEBT_ALL_STGP_ANY_MEAN&#39;, &#39;DEBT_ALL_STGP_ANY_MDN&#39;, &#39;DEBT_ALL_STGP_EVAL_N&#39;, &#39;DEBT_ALL_STGP_EVAL_MEAN&#39;, &#39;DEBT_ALL_STGP_EVAL_MDN&#39;, &#39;DEBT_ALL_PP_ANY_N&#39;, &#39;DEBT_ALL_PP_ANY_MEAN&#39;, &#39;DEBT_ALL_PP_ANY_MDN&#39;, &#39;DEBT_ALL_PP_EVAL_N&#39;, &#39;DEBT_ALL_PP_EVAL_MEAN&#39;, &#39;DEBT_ALL_PP_EVAL_MDN&#39;, &#39;DEBT_MALE_STGP_ANY_N&#39;, &#39;DEBT_MALE_STGP_ANY_MEAN&#39;, &#39;DEBT_MALE_STGP_ANY_MDN&#39;, &#39;DEBT_MALE_STGP_EVAL_N&#39;, &#39;DEBT_MALE_STGP_EVAL_MEAN&#39;, &#39;DEBT_MALE_STGP_EVAL_MDN&#39;, &#39;DEBT_MALE_PP_ANY_N&#39;, &#39;DEBT_MALE_PP_ANY_MEAN&#39;, &#39;DEBT_MALE_PP_ANY_MDN&#39;, &#39;DEBT_MALE_PP_EVAL_N&#39;, &#39;DEBT_MALE_PP_EVAL_MEAN&#39;, &#39;DEBT_MALE_PP_EVAL_MDN&#39;, &#39;DEBT_NOTMALE_STGP_ANY_N&#39;, &#39;DEBT_NOTMALE_STGP_ANY_MEAN&#39;, &#39;DEBT_NOTMALE_STGP_ANY_MDN&#39;, &#39;DEBT_NOTMALE_STGP_EVAL_N&#39;, &#39;DEBT_NOTMALE_STGP_EVAL_MEAN&#39;, &#39;DEBT_NOTMALE_STGP_EVAL_MDN&#39;, &#39;DEBT_NOTMALE_PP_ANY_N&#39;, &#39;DEBT_NOTMALE_PP_ANY_MEAN&#39;, &#39;DEBT_NOTMALE_PP_ANY_MDN&#39;, &#39;DEBT_NOTMALE_PP_EVAL_N&#39;, &#39;DEBT_NOTMALE_PP_EVAL_MEAN&#39;, &#39;DEBT_NOTMALE_PP_EVAL_MDN&#39;, &#39;DEBT_PELL_STGP_ANY_N&#39;, &#39;DEBT_PELL_STGP_ANY_MEAN&#39;, &#39;DEBT_PELL_STGP_ANY_MDN&#39;, &#39;DEBT_PELL_STGP_EVAL_N&#39;, &#39;DEBT_PELL_STGP_EVAL_MEAN&#39;, &#39;DEBT_PELL_STGP_EVAL_MDN&#39;, &#39;DEBT_PELL_PP_ANY_N&#39;, &#39;DEBT_PELL_PP_ANY_MEAN&#39;, &#39;DEBT_PELL_PP_ANY_MDN&#39;, &#39;DEBT_PELL_PP_EVAL_N&#39;, &#39;DEBT_PELL_PP_EVAL_MEAN&#39;, &#39;DEBT_PELL_PP_EVAL_MDN&#39;, &#39;DEBT_NOPELL_STGP_ANY_N&#39;, &#39;DEBT_NOPELL_STGP_ANY_MEAN&#39;, &#39;DEBT_NOPELL_STGP_ANY_MDN&#39;, &#39;DEBT_NOPELL_STGP_EVAL_N&#39;, &#39;DEBT_NOPELL_STGP_EVAL_MEAN&#39;, &#39;DEBT_NOPELL_STGP_EVAL_MDN&#39;, &#39;DEBT_NOPELL_PP_ANY_N&#39;, &#39;DEBT_NOPELL_PP_ANY_MEAN&#39;, &#39;DEBT_NOPELL_PP_ANY_MDN&#39;, &#39;DEBT_NOPELL_PP_EVAL_N&#39;, &#39;DEBT_NOPELL_PP_EVAL_MEAN&#39;, &#39;DEBT_NOPELL_PP_EVAL_MDN&#39;, &#39;DEBT_ALL_PP_ANY_MDN10YRPAY&#39;, &#39;DEBT_ALL_PP_EVAL_MDN10YRPAY&#39;, &#39;DEBT_ALL_STGP_ANY_MDN10YRPAY&#39;, &#39;DEBT_ALL_STGP_EVAL_MDN10YRPAY&#39;, &#39;EARN_COUNT_NWNE_HI_1YR&#39;, &#39;EARN_CNTOVER150_HI_1YR&#39;, &#39;EARN_COUNT_WNE_HI_1YR&#39;, &#39;EARN_MDN_HI_1YR&#39;, &#39;EARN_COUNT_NWNE_HI_2YR&#39;, &#39;EARN_CNTOVER150_HI_2YR&#39;, &#39;EARN_COUNT_WNE_HI_2YR&#39;, &#39;EARN_MDN_HI_2YR&#39;, &#39;BBRR2_FED_COMP_N&#39;, &#39;BBRR2_FED_COMP_DFLT&#39;, &#39;BBRR2_FED_COMP_DLNQ&#39;, &#39;BBRR2_FED_COMP_FBR&#39;, &#39;BBRR2_FED_COMP_DFR&#39;, &#39;BBRR2_FED_COMP_NOPROG&#39;, &#39;BBRR2_FED_COMP_MAKEPROG&#39;, &#39;BBRR2_FED_COMP_PAIDINFULL&#39;, &#39;BBRR2_FED_COMP_DISCHARGE&#39;, &#39;BBRR3_FED_COMP_N&#39;, &#39;BBRR3_FED_COMP_DFLT&#39;, &#39;BBRR3_FED_COMP_DLNQ&#39;, &#39;BBRR3_FED_COMP_FBR&#39;, &#39;BBRR3_FED_COMP_DFR&#39;, &#39;BBRR3_FED_COMP_NOPROG&#39;, &#39;BBRR3_FED_COMP_MAKEPROG&#39;, &#39;BBRR3_FED_COMP_PAIDINFULL&#39;, &#39;BBRR3_FED_COMP_DISCHARGE&#39;, &#39;EARN_COUNT_PELL_WNE_1YR&#39;, &#39;EARN_PELL_WNE_MDN_1YR&#39;, &#39;EARN_COUNT_NOPELL_WNE_1YR&#39;, &#39;EARN_NOPELL_WNE_MDN_1YR&#39;, &#39;EARN_COUNT_MALE_WNE_1YR&#39;, &#39;EARN_MALE_WNE_MDN_1YR&#39;, &#39;EARN_COUNT_NOMALE_WNE_1YR&#39;, &#39;EARN_NOMALE_WNE_MDN_1YR&#39;, &#39;EARN_COUNT_NE_3YR&#39;, &#39;EARN_NE_MDN_3YR&#39;, &#39;EARN_COUNT_WNE_3YR&#39;, &#39;EARN_CNTOVER150_3YR&#39;, &#39;EARN_COUNT_PELL_NE_3YR&#39;, &#39;EARN_PELL_NE_MDN_3YR&#39;, &#39;EARN_COUNT_NOPELL_NE_3YR&#39;, &#39;EARN_NOPELL_NE_MDN_3YR&#39;, &#39;EARN_COUNT_MALE_NE_3YR&#39;, &#39;EARN_MALE_NE_MDN_3YR&#39;, &#39;EARN_COUNT_NOMALE_NE_3YR&#39;, &#39;EARN_NOMALE_NE_MDN_3YR&#39;, &#39;EARN_COUNT_NWNE_1YR&#39;, &#39;EARN_COUNT_WNE_1YR&#39;, &#39;EARN_MDN_1YR&#39;, &#39;EARN_GT_THRESHOLD_1YR&#39;, &#39;EARN_COUNT_HIGH_CRED_1YR&#39;, &#39;EARN_IN_STATE_1YR&#39;, &#39;EARN_COUNT_NWNE_4YR&#39;, &#39;EARN_COUNT_WNE_4YR&#39;, &#39;EARN_MDN_4YR&#39;, &#39;EARN_GT_THRESHOLD_4YR&#39;, &#39;EARN_COUNT_PELL_WNE_4YR&#39;, &#39;EARN_PELL_WNE_MDN_4YR&#39;, &#39;EARN_COUNT_NOPELL_WNE_4YR&#39;, &#39;EARN_NOPELL_WNE_MDN_4YR&#39;, &#39;EARN_COUNT_MALE_WNE_4YR&#39;, &#39;EARN_MALE_WNE_MDN_4YR&#39;, &#39;EARN_COUNT_NOMALE_WNE_4YR&#39;, &#39;EARN_NOMALE_WNE_MDN_4YR&#39;, &#39;EARN_COUNT_HIGH_CRED_4YR&#39;, &#39;EARN_IN_STATE_4YR&#39;, &#39;BBRR1_FED_COMP_N&#39;, &#39;BBRR1_FED_COMP_DFLT&#39;, &#39;BBRR1_FED_COMP_DLNQ&#39;, &#39;BBRR1_FED_COMP_FBR&#39;, &#39;BBRR1_FED_COMP_DFR&#39;, &#39;BBRR1_FED_COMP_NOPROG&#39;, &#39;BBRR1_FED_COMP_MAKEPROG&#39;, &#39;BBRR1_FED_COMP_PAIDINFULL&#39;, &#39;BBRR1_FED_COMP_DISCHARGE&#39;, &#39;BBRR4_FED_COMP_N&#39;, &#39;BBRR4_FED_COMP_DFLT&#39;, &#39;BBRR4_FED_COMP_DLNQ&#39;, &#39;BBRR4_FED_COMP_FBR&#39;, &#39;BBRR4_FED_COMP_DFR&#39;, &#39;BBRR4_FED_COMP_NOPROG&#39;, &#39;BBRR4_FED_COMP_MAKEPROG&#39;, &#39;BBRR4_FED_COMP_PAIDINFULL&#39;, &#39;BBRR4_FED_COMP_DISCHARGE&#39;, &#39;DISTANCE&#39;, &#39;EARN_COUNT_NWNE_5YR&#39;, &#39;EARN_COUNT_WNE_5YR&#39;, &#39;EARN_MDN_5YR&#39;, &#39;EARN_GT_THRESHOLD_5YR&#39;, &#39;EARN_COUNT_PELL_WNE_5YR&#39;, &#39;EARN_PELL_WNE_MDN_5YR&#39;, &#39;EARN_COUNT_NOPELL_WNE_5YR&#39;, &#39;EARN_NOPELL_WNE_MDN_5YR&#39;, &#39;EARN_COUNT_MALE_WNE_5YR&#39;, &#39;EARN_MALE_WNE_MDN_5YR&#39;, &#39;EARN_COUNT_NOMALE_WNE_5YR&#39;, &#39;EARN_NOMALE_WNE_MDN_5YR&#39;, &#39;EARN_COUNT_HIGH_CRED_5YR&#39;, &#39;EARN_IN_STATE_5YR&#39;]
+Total columns: 174
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Row Index Labels:&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Print all row data Labels</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Printing all index values is noisy; show a representative sample and count.</span>
+    <span class="n">idx_list</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total row index labels: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">idx_list</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First 20 index labels:&quot;</span><span class="p">,</span> <span class="n">idx_list</span><span class="p">[:</span><span class="mi">20</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Last 20 index labels:&quot;</span><span class="p">,</span> <span class="n">idx_list</span><span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">:])</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error printing row index labels:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Row Index Labels:
+Total row index labels: 229,188
+First 20 index labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Last 20 index labels: [229168, 229169, 229170, 229171, 229172, 229173, 229174, 229175, 229176, 229177, 229178, 229179, 229180, 229181, 229182, 229183, 229184, 229185, 229186, 229187]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[41]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First 5 Rows of the Dataset:&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Print the first 5 rows of the dataset</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error displaying first 5 rows:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>First 5 Rows of the Dataset:
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>UNITID</th>
+      <th>OPEID6</th>
+      <th>INSTNM</th>
+      <th>CONTROL</th>
+      <th>MAIN</th>
+      <th>CIPCODE</th>
+      <th>CIPDESC</th>
+      <th>CREDLEV</th>
+      <th>CREDDESC</th>
+      <th>IPEDSCOUNT1</th>
+      <th>...</th>
+      <th>EARN_COUNT_PELL_WNE_5YR</th>
+      <th>EARN_PELL_WNE_MDN_5YR</th>
+      <th>EARN_COUNT_NOPELL_WNE_5YR</th>
+      <th>EARN_NOPELL_WNE_MDN_5YR</th>
+      <th>EARN_COUNT_MALE_WNE_5YR</th>
+      <th>EARN_MALE_WNE_MDN_5YR</th>
+      <th>EARN_COUNT_NOMALE_WNE_5YR</th>
+      <th>EARN_NOMALE_WNE_MDN_5YR</th>
+      <th>EARN_COUNT_HIGH_CRED_5YR</th>
+      <th>EARN_IN_STATE_5YR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100654.0</td>
+      <td>1002</td>
+      <td>Alabama A &amp; M University</td>
+      <td>Public</td>
+      <td>1</td>
+      <td>100</td>
+      <td>Agriculture, General.</td>
+      <td>3</td>
+      <td>Bachelor&#39;s Degree</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100654.0</td>
+      <td>1002</td>
+      <td>Alabama A &amp; M University</td>
+      <td>Public</td>
+      <td>1</td>
+      <td>101</td>
+      <td>Agricultural Business and Management.</td>
+      <td>3</td>
+      <td>Bachelor&#39;s Degree</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100654.0</td>
+      <td>1002</td>
+      <td>Alabama A &amp; M University</td>
+      <td>Public</td>
+      <td>1</td>
+      <td>109</td>
+      <td>Animal Sciences.</td>
+      <td>3</td>
+      <td>Bachelor&#39;s Degree</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100654.0</td>
+      <td>1002</td>
+      <td>Alabama A &amp; M University</td>
+      <td>Public</td>
+      <td>1</td>
+      <td>110</td>
+      <td>Food Science and Technology.</td>
+      <td>3</td>
+      <td>Bachelor&#39;s Degree</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100654.0</td>
+      <td>1002</td>
+      <td>Alabama A &amp; M University</td>
+      <td>Public</td>
+      <td>1</td>
+      <td>110</td>
+      <td>Food Science and Technology.</td>
+      <td>5</td>
+      <td>Master&#39;s Degree</td>
+      <td>4.0</td>
+      <td>...</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+      <td>PS</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows &#215; 174 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Inspect and Select Numeric Columns<a rel="noopener" class="anchor-link" href="#Inspect-and-Select-Numeric-Columns">&#182;</a></h2><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> Use <b><mark>select_dtypes()</mark></b> to filter columns with numeric data types (float64 and int64). Removes columns like <b><mark>UNITID</mark></b> and <b><mark>OPEID6</mark></b>, which are not useful for clustering. Use <b><mark>dropna()</mark></b> to remove rows with missing values to clean data for clustering, see also module three sample for additional cleaning examples. Use error handling <b><mark>try blocks</mark></b> to ensures the program stops if the column selection fails.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inspecting dataset to select numeric columns for clustering...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: In a try/catch block, exclude identifiers &#39;UNITID&#39; and &#39;OPEID6&#39;, </span>
+<span class="c1">#        then print the numeric columns selected for clustering and also print the data for clustering in rows &amp; columns</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Select only numeric columns</span>
+    <span class="n">numeric_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># Exclude identifier columns if present</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;UNITID&quot;</span><span class="p">,</span> <span class="s2">&quot;OPEID6&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">numeric_data</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="n">numeric_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numeric columns selected for clustering (excluding UNITID/OPEID6):&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numeric_data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total numeric columns used: </span><span class="si">{</span><span class="n">numeric_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Drop rows with missing values to ensure clustering works cleanly</span>
+    <span class="n">numeric_data_clean</span> <span class="o">=</span> <span class="n">numeric_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;any&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Limit to first 1000 rows for performance (per assignment hint)</span>
+    <span class="n">data_for_clustering</span> <span class="o">=</span> <span class="n">numeric_data_clean</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">1000</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Data prepared for clustering:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rows: </span><span class="si">{</span><span class="n">data_for_clustering</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> | Columns: </span><span class="si">{</span><span class="n">data_for_clustering</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">data_for_clustering</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error selecting numeric columns for clustering:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Inspecting dataset to select numeric columns for clustering...
+Numeric columns selected for clustering (excluding UNITID/OPEID6):
+[&#39;MAIN&#39;, &#39;CIPCODE&#39;, &#39;CREDLEV&#39;, &#39;IPEDSCOUNT1&#39;, &#39;IPEDSCOUNT2&#39;, &#39;DISTANCE&#39;]
+Total numeric columns used: 6
+
+Data prepared for clustering:
+Rows: 1000 | Columns: 6
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output">
+<div>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MAIN</th>
+      <th>CIPCODE</th>
+      <th>CREDLEV</th>
+      <th>IPEDSCOUNT1</th>
+      <th>IPEDSCOUNT2</th>
+      <th>DISTANCE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>109</td>
+      <td>3</td>
+      <td>3.0</td>
+      <td>9.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>110</td>
+      <td>3</td>
+      <td>7.0</td>
+      <td>10.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>110</td>
+      <td>5</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>110</td>
+      <td>6</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>199</td>
+      <td>3</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Normalize the Data<a rel="noopener" class="anchor-link" href="#Normalize-the-Data">&#182;</a></h2><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> Use <b><mark>MinMaxScaler()</mark></b> to scale data values between 0 and 1, ensuring all features are on the same scale. Use <b><mark>fit_transform()</mark></b> to fit the scaler to the data and transform it.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[43]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Normalizing the data using MinMaxScaler...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: in a try/catch block, normalize the data using MinMaxScaler</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+    <span class="n">normalized_data</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data_for_clustering</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Normalization complete.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Normalized data shape: </span><span class="si">{</span><span class="n">normalized_data</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error normalizing data:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Normalizing the data using MinMaxScaler...
+Normalization complete.
+Normalized data shape: (1000, 6)
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Perform Hierarchical Clustering<a rel="noopener" class="anchor-link" href="#Perform-Hierarchical-Clustering">&#182;</a></h2><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> Use <b><mark>linkage()</mark></b> to compute hierarchical clusters using <b><mark>Ward&#39;s</mark></b> method, which minimizes variance between clusters. Limit clustering to the first 1000 rows for performance. Use <b><mark>fcluster()</mark></b> to assign cluster labels to data points based on the number of clusters (max_clusters).</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Performing hierarchical clustering using Ward&#39;s method...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: in a try/catch block use the Ward&#39;s method to perform hierarchical clustering, limit max clusters to 4.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">max_clusters</span> <span class="o">=</span> <span class="mi">4</span>
+
+    <span class="c1"># Ward&#39;s method hierarchical clustering</span>
+    <span class="n">linkage_matrix</span> <span class="o">=</span> <span class="n">linkage</span><span class="p">(</span><span class="n">normalized_data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;ward&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Assign cluster labels</span>
+    <span class="n">cluster_labels</span> <span class="o">=</span> <span class="n">fcluster</span><span class="p">(</span><span class="n">linkage_matrix</span><span class="p">,</span> <span class="n">max_clusters</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;maxclust&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hierarchical clustering complete.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cluster label counts:&quot;</span><span class="p">)</span>
+    <span class="n">unique</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">cluster_labels</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Cluster </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error performing hierarchical clustering:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Performing hierarchical clustering using Ward&#39;s method...
+Hierarchical clustering complete.
+Cluster label counts:
+  Cluster 1: 187
+  Cluster 2: 381
+  Cluster 3: 214
+  Cluster 4: 218
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Generate, Save, and Output Visualizations<a rel="noopener" class="anchor-link" href="#Generate,-Save,-and-Output-Visualizations">&#182;</a></h2><p>Each visualization is created, saved and displayed, with text output provided before and after.</p>
+<h3>Dendrogram<a rel="noopener" class="anchor-link" href="#Dendrogram">&#182;</a></h3><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> A dendrogram displays the hierarchical structure of clusters. Save the image as <b><mark>dendrogram.png</mark></b>. Use <b><mark>display()</mark></b> to render the image for html file output. Do not use an <mark>html image</mark> tag in the markdown, or the image will not print in the html download.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[49]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating dendrogram to visualize hierarchical clustering...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Create a dendrogram to visualize hierarchical clustering, and save the dendrogram into a png file under the &#39;output&#39; folder.</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">dendrogram</span><span class="p">(</span><span class="n">linkage_matrix</span><span class="p">,</span> <span class="n">truncate_mode</span><span class="o">=</span><span class="s2">&quot;lastp&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">leaf_rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">leaf_font_size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hierarchical Clustering Dendrogram (Ward&#39;s Method)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Cluster / Sample Index&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Distance&quot;</span><span class="p">)</span>
+
+    <span class="n">dendrogram_path</span> <span class="o">=</span> <span class="s2">&quot;output/dendrogram.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">dendrogram_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved dendrogram to: </span><span class="si">{</span><span class="n">dendrogram_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error creating/saving dendrogram:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Creating dendrogram to visualize hierarchical clustering...
+Saved dendrogram to: output/dendrogram.png
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[50]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dendrogram visualization display...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: output the image using the display() function, for example: display(Image(filename=&quot;output/scatter_plot.png&quot;))</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;output/dendrogram.png&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error displaying dendrogram image:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Dendrogram visualization display...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output">
+<img src="javascript://"/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>PCA Scatter Plot<a rel="noopener" class="anchor-link" href="#PCA-Scatter-Plot">&#182;</a></h3><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> A PCA scatter plot projects high-dimensional data into 2D using PCA for visualization. Save the image as <b><mark>pca_scatter_plot.png</mark></b>. Use <b><mark>display()</mark></b> to render the image for html file output. Do not use an <mark>html image</mark> tag in the markdown, or the image will not print in the html download.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[51]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating scatter plot (PCA Reduced) to visualize clusters in 2D...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Create a PCA Scatter Plot to visualize clusters in 2D, and save the PCA Scatter Plot into a png file under the &#39;output&#39; folder.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    <span class="n">pca_components</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">normalized_data</span><span class="p">)</span>
+
+    <span class="n">pca_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pca_components</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;PC1&quot;</span><span class="p">,</span> <span class="s2">&quot;PC2&quot;</span><span class="p">])</span>
+    <span class="n">pca_df</span><span class="p">[</span><span class="s2">&quot;Cluster&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster_labels</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pca_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;PC1&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;PC2&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;PCA Scatter Plot (2D) Colored by Cluster&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Principal Component 1&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Principal Component 2&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
+
+    <span class="n">pca_path</span> <span class="o">=</span> <span class="s2">&quot;output/pca_scatter_plot.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">pca_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved PCA scatter plot to: </span><span class="si">{</span><span class="n">pca_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error creating/saving PCA scatter plot:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Creating scatter plot (PCA Reduced) to visualize clusters in 2D...
+Saved PCA scatter plot to: output/pca_scatter_plot.png
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[52]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PCA scatter plot visualization display...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: output the image using the display() function, for example: display(Image(filename=&quot;output/pca_scatter_plot.png&quot;))</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;output/pca_scatter_plot.png&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error displaying PCA scatter plot image:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>PCA scatter plot visualization display...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output">
+<img src="javascript://"/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Cluster Size Distribution<a rel="noopener" class="anchor-link" href="#Cluster-Size-Distribution">&#182;</a></h3><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> A cluster size distribution displays the population size of each cluster. Save the image as <b><mark>cluster_size.png</mark></b>. Use <b><mark>display()</mark></b> to render the image for html file output. Do not use an <mark>html image</mark> tag in the markdown, or the image will not print in the html download.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating cluster size distribution chart to analyze cluster populations...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Create a cluster size distribution chart, and save it into a png file under the &#39;output&#39; folder.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">cluster_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">cluster_labels</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">cluster_counts</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">cluster_counts</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Cluster Size Distribution&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Cluster&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Records&quot;</span><span class="p">)</span>
+
+    <span class="n">cluster_size_path</span> <span class="o">=</span> <span class="s2">&quot;output/cluster_size.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">cluster_size_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved cluster size distribution chart to: </span><span class="si">{</span><span class="n">cluster_size_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error creating/saving cluster size distribution chart:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Creating cluster size distribution chart to analyze cluster populations...
+Saved cluster size distribution chart to: output/cluster_size.png
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[55]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cluster size distribution visualization display...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: output the image using the display() function, for example: display(Image(filename=&quot;output/cluster_size.png&quot;))</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;output/cluster_size.png&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error displaying cluster size image:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Cluster size distribution visualization display...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output">
+<img src="javascript://"/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Feature Importance Heatmap<a rel="noopener" class="anchor-link" href="#Feature-Importance-Heatmap">&#182;</a></h3><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> A feature importance heatmap highlights the average feature values for each cluster. Save the image as <b><mark>heatmap.png</mark></b>. Use <b><mark>display()</mark></b> to render the image for html file output. Do not use an <mark>html image</mark> tag in the markdown, or the image will not print in the html download.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[56]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating feature importance heatmap to show mean feature values by cluster...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Create a feature importance heatmap, and save it into a png file under the &#39;output&#39; folder.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Create a working dataframe with cluster labels</span>
+    <span class="n">clustering_df</span> <span class="o">=</span> <span class="n">data_for_clustering</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">clustering_df</span><span class="p">[</span><span class="s2">&quot;Cluster&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster_labels</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="c1"># Mean feature values by cluster</span>
+    <span class="n">cluster_means</span> <span class="o">=</span> <span class="n">clustering_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Cluster&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Keep the most variable features for readability</span>
+    <span class="n">feature_variance</span> <span class="o">=</span> <span class="n">data_for_clustering</span><span class="o">.</span><span class="n">var</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">top_features</span> <span class="o">=</span> <span class="n">feature_variance</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+    <span class="n">heatmap_data</span> <span class="o">=</span> <span class="n">cluster_means</span><span class="p">[</span><span class="n">top_features</span><span class="p">]</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">heatmap_data</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Feature Importance Heatmap (Cluster Mean Values)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Features (Top 15 by Variance)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Cluster&quot;</span><span class="p">)</span>
+
+    <span class="n">heatmap_path</span> <span class="o">=</span> <span class="s2">&quot;output/heatmap.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">heatmap_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved heatmap to: </span><span class="si">{</span><span class="n">heatmap_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error creating/saving heatmap:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Creating feature importance heatmap to show mean feature values by cluster...
+Saved heatmap to: output/heatmap.png
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[57]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Feature important heatmap visualization display...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: output the image using the display() function, for example: display(Image(filename=&quot;output/heatmap.png&quot;))</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;output/heatmap.png&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error displaying heatmap image:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Feature important heatmap visualization display...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output">
+<img src="javascript://"/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Trend Chart<a rel="noopener" class="anchor-link" href="#Trend-Chart">&#182;</a></h3><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> A trend chart plots trends in a numeric feature across clusters. Save the image as <b><mark>trend_chart.png</mark></b>. Use <b><mark>display()</mark></b> to render the image for html file output. Do not use an <mark>html image</mark> tag in the markdown, or the image will not print in the html download.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[58]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating trend chart to analyze a numeric feature across clusters...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Create a trend chart to analyze a numeric feature across clusters, and save it into a png file under the &#39;output&#39; folder.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Pick a numeric feature for the trend chart</span>
+    <span class="c1"># Prefer a high-variance feature for a more informative plot</span>
+    <span class="k">if</span> <span class="s2">&quot;top_features&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">top_features</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">feature_variance</span> <span class="o">=</span> <span class="n">data_for_clustering</span><span class="o">.</span><span class="n">var</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">top_features</span> <span class="o">=</span> <span class="n">feature_variance</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+    <span class="n">trend_feature</span> <span class="o">=</span> <span class="n">top_features</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">trend_df</span> <span class="o">=</span> <span class="n">clustering_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Cluster&quot;</span><span class="p">)[</span><span class="n">trend_feature</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">trend_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">trend_feature</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Trend of &#39;</span><span class="si">{</span><span class="n">trend_feature</span><span class="si">}</span><span class="s2">&#39; Across Clusters (Mean)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Cluster&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean </span><span class="si">{</span><span class="n">trend_feature</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">trend_path</span> <span class="o">=</span> <span class="s2">&quot;output/trend_chart.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">trend_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved trend chart to: </span><span class="si">{</span><span class="n">trend_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error creating/saving trend chart:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Creating trend chart to analyze a numeric feature across clusters...
+Saved trend chart to: output/trend_chart.png
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[59]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trend chart visualization display...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: output the image using the display() function, for example: display(Image(filename=&quot;output/trend_chart.png&quot;))</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;output/trend_chart.png&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error displaying trend chart image:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Trend chart visualization display...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output">
+<img src="javascript://"/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Scatter Plot<a rel="noopener" class="anchor-link" href="#Scatter-Plot">&#182;</a></h3><div class="alert alert-block alert-info">
+    <span style="color:black;"><b><i>Hints:</i></b> A scatter plot explores the relationship between two features, grouped by clusters. Save the image as <b><mark>scatter_plot.png</mark></b>. Use <b><mark>display()</mark></b> to render the image for html file output. Do not use an <mark>html image</mark> tag in the markdown, or the image will not print in the html download.</span>
+</div>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[60]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating scatter plot of two features...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: Create a scatter plot of two features, and save it into a png file under the &#39;output&#39; folder.</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Choose two numeric features for scatter plot</span>
+    <span class="k">if</span> <span class="s2">&quot;top_features&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">top_features</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">feature_variance</span> <span class="o">=</span> <span class="n">data_for_clustering</span><span class="o">.</span><span class="n">var</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">top_features</span> <span class="o">=</span> <span class="n">feature_variance</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+    <span class="n">x_feature</span><span class="p">,</span> <span class="n">y_feature</span> <span class="o">=</span> <span class="n">top_features</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">top_features</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">scatter_df</span> <span class="o">=</span> <span class="n">clustering_df</span><span class="p">[[</span><span class="n">x_feature</span><span class="p">,</span> <span class="n">y_feature</span><span class="p">,</span> <span class="s2">&quot;Cluster&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">scatter_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">x_feature</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_feature</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Scatter Plot: </span><span class="si">{</span><span class="n">x_feature</span><span class="si">}</span><span class="s2"> vs </span><span class="si">{</span><span class="n">y_feature</span><span class="si">}</span><span class="s2"> (Colored by Cluster)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">x_feature</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">y_feature</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Cluster&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
+
+    <span class="n">scatter_path</span> <span class="o">=</span> <span class="s2">&quot;output/scatter_plot.png&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">scatter_path</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved scatter plot to: </span><span class="si">{</span><span class="n">scatter_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error creating/saving scatter plot:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Creating scatter plot of two features...
+Saved scatter plot to: output/scatter_plot.png
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[61]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+     <div class="CodeMirror cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scatter plot visualization display...&quot;</span><span class="p">)</span>
+<span class="c1"># To Do: output the image using the display() function, for example: display(Image(filename=&quot;output/scatter_plot.png&quot;))</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;output/scatter_plot.png&quot;</span><span class="p">))</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error displaying scatter plot image:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+    <span class="k">raise</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Scatter plot visualization display...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output">
+<img src="javascript://"/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Part 2: Reflection<a rel="noopener" class="anchor-link" href="#Part-2:-Reflection">&#182;</a></h2><p><i>This part is to be completed in a word document, using the output above to answer the topics.</i></p>
+<h3>Identify patterns in the data. Consider the following:<a rel="noopener" class="anchor-link" href="#Identify-patterns-in-the-data.-Consider-the-following:">&#182;</a></h3><ul>
+<li>Are there any clear trends, clusters, or outliers visible in your visualizations?</li>
+<li>Are certain variables showing consistent behavior or relationships?</li>
+<li>Are the patterns similar across different visualization types?</li>
+</ul>
+<h3>Draw conclusions from the patterns. Consider the following:<a rel="noopener" class="anchor-link" href="#Draw-conclusions-from-the-patterns.-Consider-the-following:">&#182;</a></h3><ul>
+<li>Are your conclusions clearly based on the patterns you observed?</li>
+<li>Are your findings supported by multiple visuals or data points?</li>
+</ul>
+<h3>Explain how the visualizations validate your findings. Consider the following:<a rel="noopener" class="anchor-link" href="#Explain-how-the-visualizations-validate-your-findings.-Consider-the-following:">&#182;</a></h3><ul>
+<li>Are specific chart elements (e.g., color, scale, labels) helping to highlight your findings?</li>
+<li>Are the insights you found something you could not easily see without the visuals?</li>
+</ul>
+<h3>Write a summary of the visualization choices you made. Include the following:<a rel="noopener" class="anchor-link" href="#Write-a-summary-of-the-visualization-choices-you-made.-Include-the-following:">&#182;</a></h3><ul>
+<li>An explanation of the types of charts you used</li>
+<li>An explanation of the formatting decisions to support visual clarity</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math, .d2l-element, .d2l-cplus-layout') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
+							const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
+							elm.replaceWith(mrow);
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							outputScale: 1.5,
+							renderLatex: false,
+							enableMML3Support: false
+						});
+					}
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code, false);
+					});
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					window.D2L.EmbedRenderer.renderEmbeds(document.body);
+				});</script></body></html>

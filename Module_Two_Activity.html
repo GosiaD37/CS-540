@@ -1,0 +1,8895 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h1>Module Two Activity<a rel="noopener" class="anchor-link" href="#Module-Two-Activity">&#182;</a></h1><p>For the module two activity you are required to produce coding samples in accordance with the requirements in the project guidelines and rubric. This Notebook has been pre-created as a shell for your project submission.</p>
+<p>Once your code is complete, you will download this notebook as an HTML file by clicking <strong>File</strong>, then <strong>Download As</strong>, then <strong>HTML (.html)</strong> from the Jupyter menu bar. Validate that your code and final table output is rendered in the html file before submission.</p>
+<div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Missing Blocks:</i></b> Ensure that you have clicked <b><mark>Run</mark></b> for all blocks before downloading as an HTML file or the block may be missing from your submission.</span>
+</div>
+<h3>Data Source Information<a rel="noopener" class="anchor-link" href="#Data-Source-Information">&#182;</a></h3><p>The sourcing information for the data sets can be found in the <code>README.md</code> file within the data folder.</p>
+<p>To use this starter code file, replace the <code>data/sample_use_only/titanic_raw.csv</code> with the reference to your selected data from the list below:</p>
+<ul>
+<li><code>data/dirty_data.csv</code></li>
+<li><code>data/business_data.csv</code></li>
+</ul>
+<div class="alert alert-block alert-success">
+<span style="color:black;"><b><i>To Begin:</i></b> replace the <mark>data/sample_use_only/titanic_raw.csv</mark> sample data path with the path to your selected data set.</span>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Reference the selected dataset for cleaning</span>
+<span class="n">reference_file</span> <span class="o">=</span> <span class="s2">&quot;data/dirty_data.csv&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Installing Required Packages<a rel="noopener" class="anchor-link" href="#Installing-Required-Packages">&#182;</a></h2><p>If you have additional packages that you would like to use or install, add them to the <strong>requirements.txt</strong> file then run the next block.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pip</span> install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>186.26s - pydevd: Sending message related to process being replaced timed-out after 5 seconds
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>Requirement already satisfied: pip in /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages (24.2)
+<span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x10248a180&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/pip/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x102cad4c0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/pip/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x102cad880&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/pip/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x102cada90&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/pip/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x102cadc70&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/pip/</span><span class="ansi-yellow-fg">
+</span>
+<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> A new release of pip is available: <span class="ansi-red-fg">24.2</span> -&gt; <span class="ansi-green-fg">26.0.1</span>
+<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> To update, run: <span class="ansi-green-fg">pip3 install --upgrade pip</span>
+Note: you may need to restart the kernel to use updated packages.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pip</span> install -r requirements.txt
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>205.55s - pydevd: Sending message related to process being replaced timed-out after 5 seconds
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x106d2f0e0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/ydata-profiling/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x106e3be30&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/ydata-profiling/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x106f74d40&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/ydata-profiling/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x106f959a0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/ydata-profiling/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-yellow-fg">WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x106f95af0&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;)&#39;: /simple/ydata-profiling/</span><span class="ansi-yellow-fg">
+</span><span class="ansi-red-fg">ERROR: Could not find a version that satisfies the requirement ydata-profiling==4.16.1 (from versions: none)</span><span class="ansi-red-fg">
+</span>
+<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> A new release of pip is available: <span class="ansi-red-fg">24.2</span> -&gt; <span class="ansi-green-fg">26.0.1</span>
+<span class="ansi-bold">[</span><span class="ansi-blue-fg">notice</span><span class="ansi-bold">]</span> To update, run: <span class="ansi-green-fg">pip3 install --upgrade pip</span>
+<span class="ansi-red-fg">ERROR: No matching distribution found for ydata-profiling==4.16.1</span><span class="ansi-red-fg">
+</span>Note: you may need to restart the kernel to use updated packages.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Import the Required Packages<a rel="noopener" class="anchor-link" href="#Import-the-Required-Packages">&#182;</a></h2><p>If you have additional packages that you would like to import, add them here.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Loading the Data<a rel="noopener" class="anchor-link" href="#Loading-the-Data">&#182;</a></h2><p>After you have selected your data set that wish to wrangle, replace the reference file path in the code block at the top of this Notebook, then run the following block.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Explicitly load the dirty dataset to override sample data</span>
+<span class="n">raw_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/dirty_data.csv&quot;</span><span class="p">)</span>
+
+<span class="n">raw_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>station</th>
+<th>PRCP</th>
+<th>SNOW</th>
+<th>SNWD</th>
+<th>TMAX</th>
+<th>TMIN</th>
+<th>TOBS</th>
+<th>WESF</th>
+<th>inclement_weather</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2018-01-02T00:00:00</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>-8.3</td>
+<td>-16.1</td>
+<td>-12.2</td>
+<td>NaN</td>
+<td>False</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2018-01-03T00:00:00</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>-4.4</td>
+<td>-13.9</td>
+<td>-13.3</td>
+<td>NaN</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h1>Cleaning the Data<a rel="noopener" class="anchor-link" href="#Cleaning-the-Data">&#182;</a></h1><p>The sections that follow have some pre-templated steps to examine and clean data. The columns or specified attributes will need to be replaced for your respective dataset that you are cleaning. You may also need to add different cleaning options from your reading as this provides an example starting point to work with your selected dataset.</p>
+<p><em><strong>Remember to add comments as you go.</strong></em></p>
+<h2>Columns<a rel="noopener" class="anchor-link" href="#Columns">&#182;</a></h2><div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Example Data:</i></b> Keep in mind that the column values are from the sample data and will not represent your dataset until these blocks are run.</span>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>Index([&#39;date&#39;, &#39;station&#39;, &#39;PRCP&#39;, &#39;SNOW&#39;, &#39;SNWD&#39;, &#39;TMAX&#39;, &#39;TMIN&#39;, &#39;TOBS&#39;,
+       &#39;WESF&#39;, &#39;inclement_weather&#39;],
+      dtype=&#39;str&#39;)</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Renaming Columns<a rel="noopener" class="anchor-link" href="#Renaming-Columns">&#182;</a></h3><p>If any of the columns in your dataset need renamed, you can use the following examples to update your column names.</p>
+<div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Example Data:</i></b> Keep in mind that the column values selected below are from the sample data and will need replaced before running the block with your dataset.</span>
+</div>
+<p>In the example below we want to rename the <code>PassengerId</code> column <code>ID</code> and the <code>Pclass</code> column to say <code>Class</code> as we are considering merging this data with another dataset later which will use these columns as shared keys. For this task, we use the <code>rename()</code> method and pass in a dictionary mapping the column names to their new names. We can pass <code>inplace=True</code> to change our original dataframe instead of getting a new one back, or <code>inplace=False</code> to create a new dataframe to compare against our original. In the example, we are creating a new dataframe that we will use for all follow-on cleaning actions.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Rename columns for clarity and consistency</span>
+<span class="n">clean_data</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;PassengerId&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger_ID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Pclass&quot;</span><span class="p">:</span> <span class="s2">&quot;Passenger_Class&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Sex&quot;</span><span class="p">:</span> <span class="s2">&quot;Gender&quot;</span>
+    <span class="p">},</span>
+    <span class="n">inplace</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="n">clean_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>station</th>
+<th>PRCP</th>
+<th>SNOW</th>
+<th>SNWD</th>
+<th>TMAX</th>
+<th>TMIN</th>
+<th>TOBS</th>
+<th>WESF</th>
+<th>inclement_weather</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2018-01-02T00:00:00</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>-8.3</td>
+<td>-16.1</td>
+<td>-12.2</td>
+<td>NaN</td>
+<td>False</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2018-01-03T00:00:00</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>-4.4</td>
+<td>-13.9</td>
+<td>-13.3</td>
+<td>NaN</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Working with Missing Values<a rel="noopener" class="anchor-link" href="#Working-with-Missing-Values">&#182;</a></h2><p>Lets take a look at the output of <code>info()</code> method to get a quick view of additional information about the data set which can help pinpoint missing values and wrong data types.</p>
+<div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Example Data:</i></b> Keep in mind that the output below are from the sample data and will need replaced before running the block with your dataset.</span>
+</div>
+<p>In the example dataset, we have an index range of 891 entries or rows available in the sample dataset. Using that foundational data, we can examine the null counts to identify which columns may have null, missing or NaN values. In the example dataset, the following columns indicate potential issues in the data: Age, Cabin, and Embarked.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># View dataset structure and identify missing values</span>
+<span class="n">clean_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>&lt;class &#39;pandas.DataFrame&#39;&gt;
+RangeIndex: 765 entries, 0 to 764
+Data columns (total 10 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   date               765 non-null    str    
+ 1   station            765 non-null    str    
+ 2   PRCP               765 non-null    float64
+ 3   SNOW               577 non-null    float64
+ 4   SNWD               577 non-null    float64
+ 5   TMAX               765 non-null    float64
+ 6   TMIN               765 non-null    float64
+ 7   TOBS               398 non-null    float64
+ 8   WESF               11 non-null     float64
+ 9   inclement_weather  408 non-null    object 
+dtypes: float64(7), object(1), str(2)
+memory usage: 59.9+ KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>isnull()<a rel="noopener" class="anchor-link" href="#isnull()">&#182;</a></h3><p>We can also use the <code>isnull()</code> method to return a dataframe of boolean values where <strong>True</strong> represents missing data.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Identify missing values in each column</span>
+<span class="n">clean_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>station</th>
+<th>PRCP</th>
+<th>SNOW</th>
+<th>SNWD</th>
+<th>TMAX</th>
+<th>TMIN</th>
+<th>TOBS</th>
+<th>WESF</th>
+<th>inclement_weather</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr>
+<th>1</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr>
+<th>2</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr>
+<th>3</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<th>4</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>760</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<th>761</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<th>762</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<th>763</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr>
+<th>764</th>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<p>765 rows &#215; 10 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p>For the example dataset, since we already saw from the <code>info()</code> method that only three columns were impacted by data issues, the output of the <code>isnull()</code> method may not be as helpful so we can limit the output for a given column to check for nulls or use the output for other cleaning functions as shown in the example below.</p>
+<p>For your selected dataset, you can replace the Column name <code>Age</code> with your selected column that you would like to assess expanding on the dataset for additional afflicted columns for cleaning.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">bool_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;TOBS&quot;</span><span class="p">])</span>
+<span class="n">missing_age_data</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="n">bool_series</span><span class="p">]</span>
+<span class="n">missing_age_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>station</th>
+<th>PRCP</th>
+<th>SNOW</th>
+<th>SNWD</th>
+<th>TMAX</th>
+<th>TMIN</th>
+<th>TOBS</th>
+<th>WESF</th>
+<th>inclement_weather</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>7</th>
+<td>2018-01-04T00:00:00</td>
+<td>?</td>
+<td>20.6</td>
+<td>229.0</td>
+<td>inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>19.3</td>
+<td>True</td>
+</tr>
+<tr>
+<th>8</th>
+<td>2018-01-04T00:00:00</td>
+<td>?</td>
+<td>20.6</td>
+<td>229.0</td>
+<td>inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>19.3</td>
+<td>True</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>757</th>
+<td>2018-12-29T00:00:00</td>
+<td>?</td>
+<td>21.3</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>758</th>
+<td>2018-12-29T00:00:00</td>
+<td>?</td>
+<td>21.3</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>759</th>
+<td>2018-12-30T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>763</th>
+<td>2018-12-31T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>764</th>
+<td>2018-12-31T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-inf</td>
+<td>5505.0</td>
+<td>-40.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+<p>367 rows &#215; 10 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Using Numpy to Find Missing Data using a Dictionary Comprehension<a rel="noopener" class="anchor-link" href="#Using-Numpy-to-Find-Missing-Data-using-a-Dictionary-Comprehension">&#182;</a></h3><p>Rather than do this for each column, we can write a function that will use a <a rel="noopener" href="https://www.python.org/dev/peps/pep-0274/">dictionary comprehension</a> to check all the columns for us:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Function to count missing (NaN) values in each column using a dictionary comprehension</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_nan_count</span><span class="p">(</span><span class="n">clean_data</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="n">col</span><span class="p">:</span> <span class="n">clean_data</span><span class="p">[</span><span class="n">clean_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">clean_data</span><span class="o">.</span><span class="n">columns</span>
+    <span class="p">}</span>
+
+<span class="c1"># Display missing value counts for each column</span>
+<span class="n">get_nan_count</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>{&#39;date&#39;: 0,
+ &#39;station&#39;: 0,
+ &#39;PRCP&#39;: 0,
+ &#39;SNOW&#39;: 188,
+ &#39;SNWD&#39;: 188,
+ &#39;TMAX&#39;: 0,
+ &#39;TMIN&#39;: 0,
+ &#39;TOBS&#39;: 367,
+ &#39;WESF&#39;: 754,
+ &#39;inclement_weather&#39;: 357}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Filling Missing Values Using fillna(), replace() and interpolate()<a rel="noopener" class="anchor-link" href="#Filling-Missing-Values-Using-fillna(),-replace()-and-interpolate()">&#182;</a></h3><p>From the example output, there were 177 rows of data that were impacted by missing data from the sample dataset. For your selected dataset you should evaluate your columns you identified with missing or null values and expand to the afflicted columns to clean your respective dataset.</p>
+<h4>Filling Missing Values with a Specific Value Using fillna()<a rel="noopener" class="anchor-link" href="#Filling-Missing-Values-with-a-Specific-Value-Using-fillna()">&#182;</a></h4><p>Here in the example, we will fill in the missing <code>Age</code> values with an age of <code>0</code> based on dataset knowledge, you will make your own decisions for how you handle your missing data and justify your decisions as part of your activity reflection.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Fill missing snow-related values with 0</span>
+<span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;SNOW&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;SNWD&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;WESF&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Replace invalid values and interpolate temperature</span>
+<span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;SNWD&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;TOBS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;TOBS&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+
+<span class="c1"># Fill missing inclement weather values</span>
+<span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;inclement_weather&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;False&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">clean_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>&lt;class &#39;pandas.DataFrame&#39;&gt;
+RangeIndex: 765 entries, 0 to 764
+Data columns (total 10 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   date               765 non-null    str    
+ 1   station            765 non-null    str    
+ 2   PRCP               765 non-null    float64
+ 3   SNOW               577 non-null    float64
+ 4   SNWD               577 non-null    float64
+ 5   TMAX               765 non-null    float64
+ 6   TMIN               765 non-null    float64
+ 7   TOBS               762 non-null    float64
+ 8   WESF               11 non-null     float64
+ 9   inclement_weather  408 non-null    object 
+dtypes: float64(7), object(1), str(2)
+memory usage: 59.9+ KB
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>/var/folders/4d/dm_yk7mj3_171dh_kccwrzpw0000gn/T/ipykernel_5839/2080648012.py:2: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using &#39;df[col] = df[col].method(value)&#39;.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  clean_data[&quot;SNOW&quot;].fillna(0, inplace=True)
+/var/folders/4d/dm_yk7mj3_171dh_kccwrzpw0000gn/T/ipykernel_5839/2080648012.py:3: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using &#39;df[col] = df[col].method(value)&#39;.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  clean_data[&quot;SNWD&quot;].fillna(0, inplace=True)
+/var/folders/4d/dm_yk7mj3_171dh_kccwrzpw0000gn/T/ipykernel_5839/2080648012.py:4: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using &#39;df[col] = df[col].method(value)&#39;.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  clean_data[&quot;WESF&quot;].fillna(0, inplace=True)
+/var/folders/4d/dm_yk7mj3_171dh_kccwrzpw0000gn/T/ipykernel_5839/2080648012.py:7: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using &#39;df[col] = df[col].method(value)&#39;.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  clean_data[&quot;SNWD&quot;].replace(-np.inf, np.nan, inplace=True)
+/var/folders/4d/dm_yk7mj3_171dh_kccwrzpw0000gn/T/ipykernel_5839/2080648012.py:11: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using &#39;df[col] = df[col].method(value)&#39;.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  clean_data[&quot;inclement_weather&quot;].fillna(&quot;False&quot;, inplace=True)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p>If you do not find the info() method helpful to find the missing data, you can use the previously created get_nan_count() we created to view the missing data by column. In the sample dataset you will see there are still two columns with null values to be addressed.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Display remaining missing values by column</span>
+<span class="n">get_nan_count</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>{&#39;date&#39;: 0,
+ &#39;station&#39;: 0,
+ &#39;PRCP&#39;: 0,
+ &#39;SNOW&#39;: 188,
+ &#39;SNWD&#39;: 188,
+ &#39;TMAX&#39;: 0,
+ &#39;TMIN&#39;: 0,
+ &#39;TOBS&#39;: 3,
+ &#39;WESF&#39;: 754,
+ &#39;inclement_weather&#39;: 357}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<div class="alert alert-block alert-warning">
+<span style="color:black;"><b><i>Example Data:</i></b> Your selected dataset is likely to have several columns where the data is missing, create additional code blocks as necessary to clean your data according to the assignment requirements. Here we will clean the columns with different methods to show you different use cases, you will modify the code herein to the methods you feel are appropriate for your selected data set.
+</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h4>Replacing Missing Values Using replace()<a rel="noopener" class="anchor-link" href="#Replacing-Missing-Values-Using-replace()">&#182;</a></h4><p>Here in the example, we will replace the missing <code>Embarked</code> values with an age of <code>U</code> to represent <strong>Unknown</strong> based on dataset knowledge, you will make your own decisions for how you handle your missing data and justify your decisions as part of your activity reflection.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Replace missing inclement_weather values with &#39;False&#39; to represent no reported event</span>
+<span class="n">clean_data</span><span class="p">[</span><span class="s2">&quot;inclement_weather&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;False&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">clean_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>&lt;class &#39;pandas.DataFrame&#39;&gt;
+RangeIndex: 765 entries, 0 to 764
+Data columns (total 10 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   date               765 non-null    str    
+ 1   station            765 non-null    str    
+ 2   PRCP               765 non-null    float64
+ 3   SNOW               577 non-null    float64
+ 4   SNWD               577 non-null    float64
+ 5   TMAX               765 non-null    float64
+ 6   TMIN               765 non-null    float64
+ 7   TOBS               762 non-null    float64
+ 8   WESF               11 non-null     float64
+ 9   inclement_weather  408 non-null    object 
+dtypes: float64(7), object(1), str(2)
+memory usage: 59.9+ KB
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>/var/folders/4d/dm_yk7mj3_171dh_kccwrzpw0000gn/T/ipykernel_5839/573272873.py:2: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing &#39;df[col].method(value, inplace=True)&#39;, try using &#39;df.method({col: value}, inplace=True)&#39; instead, to perform the operation inplace on the original object, or try to avoid an inplace operation using &#39;df[col] = df[col].method(value)&#39;.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  clean_data[&quot;inclement_weather&quot;].replace(to_replace=np.nan, value=&quot;False&quot;, inplace=True)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h4>Dropping Missing Values in Pandas Using dropna()<a rel="noopener" class="anchor-link" href="#Dropping-Missing-Values-in-Pandas-Using-dropna()">&#182;</a></h4><p>Here in the example, we will drop the column <code>Cabin</code> based on dataset knowledge, you will make your own decisions for how you handle your missing data and justify your decisions as part of your activity reflection. Keep in mind that if you use dropna() with an axis of 1, where there are nulls or missing values in more than one column, it may drop all columns that have null or missing values.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Drop columns that contain mostly missing values</span>
+<span class="n">clean_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">clean_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>&lt;class &#39;pandas.DataFrame&#39;&gt;
+RangeIndex: 765 entries, 0 to 764
+Data columns (total 5 columns):
+ #   Column   Non-Null Count  Dtype  
+---  ------   --------------  -----  
+ 0   date     765 non-null    str    
+ 1   station  765 non-null    str    
+ 2   PRCP     765 non-null    float64
+ 3   TMAX     765 non-null    float64
+ 4   TMIN     765 non-null    float64
+dtypes: float64(3), str(2)
+memory usage: 30.0 KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Duplicated Records<a rel="noopener" class="anchor-link" href="#Duplicated-Records">&#182;</a></h3><p>Some datasets may include duplicated records.</p>
+<div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Example Data:</i></b> Keep in mind that the data types are from the sample data and will not represent your dataset until these blocks are run.</span>
+</div>
+<p>The sample dataset does not have any duplicated records, though some code examples will be provided here for your use against your selected dataset, update the actions you would like to take against your selected dataset to clean it to your preference.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">clean_data</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>0      False
+1       True
+2       True
+3      False
+4      False
+5       True
+6       True
+7      False
+8       True
+9      False
+10      True
+11     False
+12     False
+13     False
+14     False
+15     False
+16     False
+17     False
+18     False
+19     False
+20     False
+21     False
+22      True
+23      True
+24      True
+25     False
+26     False
+27     False
+28      True
+29      True
+30     False
+31     False
+32      True
+33     False
+34     False
+35      True
+36     False
+37      True
+38      True
+39     False
+40     False
+41      True
+42     False
+43     False
+44     False
+45     False
+46     False
+47     False
+48     False
+49     False
+50     False
+51     False
+52     False
+53     False
+54      True
+55     False
+56     False
+57      True
+58     False
+59     False
+60     False
+61      True
+62     False
+63      True
+64     False
+65      True
+66     False
+67      True
+68     False
+69      True
+70      True
+71      True
+72     False
+73     False
+74      True
+75     False
+76     False
+77     False
+78      True
+79      True
+80     False
+81      True
+82     False
+83      True
+84     False
+85     False
+86      True
+87     False
+88     False
+89      True
+90     False
+91     False
+92      True
+93     False
+94     False
+95      True
+96     False
+97     False
+98      True
+99      True
+100    False
+101    False
+102    False
+103    False
+104    False
+105    False
+106    False
+107    False
+108    False
+109    False
+110     True
+111    False
+112    False
+113    False
+114    False
+115    False
+116     True
+117    False
+118    False
+119     True
+120    False
+121     True
+122     True
+123     True
+124    False
+125    False
+126    False
+127     True
+128    False
+129    False
+130    False
+131    False
+132     True
+133    False
+134     True
+135    False
+136     True
+137    False
+138     True
+139    False
+140     True
+141    False
+142    False
+143    False
+144     True
+145    False
+146    False
+147    False
+148    False
+149    False
+150    False
+151    False
+152    False
+153    False
+154    False
+155    False
+156    False
+157     True
+158    False
+159    False
+160    False
+161     True
+162     True
+163    False
+164     True
+165    False
+166    False
+167     True
+168    False
+169    False
+170     True
+171    False
+172     True
+173     True
+174    False
+175    False
+176     True
+177    False
+178    False
+179    False
+180     True
+181    False
+182    False
+183     True
+184     True
+185    False
+186    False
+187     True
+188    False
+189     True
+190     True
+191    False
+192     True
+193     True
+194     True
+195    False
+196    False
+197    False
+198    False
+199    False
+200    False
+201     True
+202    False
+203    False
+204     True
+205    False
+206    False
+207    False
+208     True
+209     True
+210    False
+211     True
+212    False
+213    False
+214     True
+215     True
+216     True
+217    False
+218    False
+219    False
+220     True
+221    False
+222    False
+223     True
+224    False
+225    False
+226    False
+227     True
+228     True
+229    False
+230    False
+231    False
+232     True
+233     True
+234     True
+235    False
+236    False
+237    False
+238    False
+239     True
+240    False
+241    False
+242     True
+243    False
+244    False
+245     True
+246     True
+247    False
+248    False
+249    False
+250     True
+251    False
+252    False
+253    False
+254    False
+255    False
+256     True
+257    False
+258    False
+259     True
+260     True
+261    False
+262     True
+263    False
+264     True
+265    False
+266    False
+267    False
+268    False
+269     True
+270    False
+271    False
+272     True
+273     True
+274    False
+275     True
+276     True
+277    False
+278    False
+279    False
+280    False
+281    False
+282    False
+283    False
+284     True
+285    False
+286    False
+287    False
+288    False
+289     True
+290    False
+291     True
+292     True
+293     True
+294    False
+295     True
+296    False
+297    False
+298    False
+299    False
+300    False
+301    False
+302    False
+303    False
+304    False
+305     True
+306    False
+307    False
+308     True
+309     True
+310    False
+311     True
+312     True
+313    False
+314    False
+315     True
+316     True
+317     True
+318    False
+319     True
+320    False
+321    False
+322    False
+323     True
+324     True
+325    False
+326    False
+327    False
+328    False
+329     True
+330    False
+331     True
+332    False
+333     True
+334     True
+335    False
+336     True
+337     True
+338    False
+339    False
+340     True
+341     True
+342    False
+343    False
+344     True
+345    False
+346    False
+347     True
+348    False
+349     True
+350    False
+351    False
+352    False
+353     True
+354    False
+355    False
+356    False
+357     True
+358     True
+359     True
+360    False
+361    False
+362    False
+363    False
+364    False
+365    False
+366    False
+367    False
+368     True
+369    False
+370    False
+371     True
+372     True
+373    False
+374     True
+375     True
+376    False
+377    False
+378    False
+379    False
+380    False
+381     True
+382    False
+383    False
+384    False
+385    False
+386    False
+387    False
+388    False
+389     True
+390     True
+391    False
+392     True
+393     True
+394     True
+395     True
+396    False
+397    False
+398    False
+399    False
+400    False
+401     True
+402     True
+403    False
+404    False
+405    False
+406    False
+407     True
+408     True
+409     True
+410    False
+411    False
+412    False
+413    False
+414    False
+415    False
+416    False
+417    False
+418     True
+419    False
+420    False
+421    False
+422    False
+423    False
+424    False
+425     True
+426    False
+427    False
+428    False
+429     True
+430    False
+431    False
+432    False
+433     True
+434    False
+435     True
+436     True
+437     True
+438    False
+439    False
+440     True
+441    False
+442     True
+443    False
+444    False
+445    False
+446     True
+447     True
+448     True
+449    False
+450    False
+451     True
+452    False
+453    False
+454    False
+455    False
+456    False
+457    False
+458     True
+459    False
+460     True
+461    False
+462     True
+463     True
+464     True
+465    False
+466     True
+467     True
+468    False
+469    False
+470     True
+471     True
+472    False
+473     True
+474    False
+475     True
+476    False
+477     True
+478     True
+479    False
+480    False
+481    False
+482     True
+483     True
+484    False
+485     True
+486    False
+487     True
+488    False
+489    False
+490     True
+491    False
+492    False
+493    False
+494    False
+495    False
+496    False
+497     True
+498    False
+499    False
+500    False
+501     True
+502    False
+503    False
+504     True
+505    False
+506     True
+507    False
+508    False
+509    False
+510    False
+511    False
+512     True
+513    False
+514     True
+515     True
+516     True
+517    False
+518    False
+519     True
+520     True
+521    False
+522    False
+523     True
+524    False
+525    False
+526     True
+527    False
+528    False
+529    False
+530    False
+531    False
+532    False
+533    False
+534     True
+535    False
+536    False
+537    False
+538     True
+539     True
+540    False
+541    False
+542     True
+543     True
+544    False
+545    False
+546     True
+547    False
+548    False
+549    False
+550     True
+551    False
+552    False
+553    False
+554     True
+555    False
+556    False
+557     True
+558    False
+559    False
+560     True
+561     True
+562     True
+563    False
+564    False
+565    False
+566     True
+567    False
+568    False
+569     True
+570    False
+571    False
+572     True
+573     True
+574    False
+575    False
+576    False
+577     True
+578    False
+579     True
+580    False
+581     True
+582     True
+583    False
+584     True
+585    False
+586    False
+587    False
+588    False
+589    False
+590    False
+591     True
+592     True
+593     True
+594     True
+595    False
+596    False
+597    False
+598     True
+599     True
+600     True
+601    False
+602    False
+603    False
+604     True
+605    False
+606     True
+607     True
+608     True
+609    False
+610    False
+611    False
+612     True
+613    False
+614    False
+615    False
+616    False
+617     True
+618     True
+619    False
+620    False
+621    False
+622    False
+623    False
+624     True
+625    False
+626     True
+627    False
+628    False
+629     True
+630    False
+631    False
+632     True
+633     True
+634     True
+635     True
+636    False
+637    False
+638    False
+639    False
+640    False
+641    False
+642     True
+643    False
+644     True
+645    False
+646     True
+647    False
+648    False
+649     True
+650     True
+651     True
+652    False
+653     True
+654    False
+655     True
+656     True
+657    False
+658    False
+659     True
+660     True
+661    False
+662     True
+663     True
+664     True
+665    False
+666    False
+667    False
+668     True
+669    False
+670    False
+671    False
+672     True
+673     True
+674     True
+675    False
+676     True
+677    False
+678    False
+679     True
+680     True
+681    False
+682    False
+683     True
+684     True
+685    False
+686    False
+687    False
+688     True
+689    False
+690    False
+691    False
+692    False
+693    False
+694    False
+695    False
+696     True
+697    False
+698    False
+699    False
+700    False
+701     True
+702    False
+703     True
+704     True
+705    False
+706    False
+707    False
+708     True
+709    False
+710    False
+711    False
+712    False
+713     True
+714    False
+715    False
+716    False
+717     True
+718     True
+719    False
+720     True
+721     True
+722    False
+723    False
+724     True
+725    False
+726    False
+727     True
+728     True
+729    False
+730    False
+731     True
+732    False
+733    False
+734    False
+735    False
+736     True
+737    False
+738    False
+739    False
+740     True
+741     True
+742    False
+743    False
+744     True
+745     True
+746     True
+747    False
+748     True
+749     True
+750    False
+751     True
+752     True
+753    False
+754    False
+755    False
+756     True
+757    False
+758     True
+759    False
+760    False
+761     True
+762     True
+763    False
+764     True
+dtype: bool</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Data Types<a rel="noopener" class="anchor-link" href="#Data-Types">&#182;</a></h2><div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Example Data:</i></b> Keep in mind that the data types are from the sample data and will not represent your dataset until these blocks are run.</span>
+</div>
+<p>You can use either the .dtypes property to view the data types for each column in the data frame, or the .info() method which will provide additional insights into the columns.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># View data types for each column in the dataset</span>
+<span class="n">clean_data</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>date           str
+station        str
+PRCP       float64
+TMAX       float64
+TMIN       float64
+dtype: object</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Data Type Conversion<a rel="noopener" class="anchor-link" href="#Data-Type-Conversion">&#182;</a></h3><p>If any of the data types in your dataset need to be modified or redefined, you can use the following block to update your column data types.</p>
+<div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Example Data:</i></b> Keep in mind that the columns and data types selected below are from the sample data and will need replaced before running the block with your dataset.</span>
+</div>
+<p>In the example below we want to modify the data values and type for the <code>Survived</code> column to represent a <code>bool</code>.</p>
+<p>If you do not have any type conversions required for your data set, feel free to comment out the existing example and add a comment as applicable in the code block below:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Data Type Conversion</span>
+<span class="c1"># Only the date column requires conversion for this dataset</span>
+
+<span class="n">clean_data</span> <span class="o">=</span> <span class="n">clean_data</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+    <span class="n">date</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+
+<span class="c1"># Verify updated data types</span>
+<span class="n">clean_data</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>date       datetime64[us]
+station               str
+PRCP              float64
+TMAX              float64
+TMIN              float64
+dtype: object</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p>We will take a quick look at the output of the describe method.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">clean_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>PRCP</th>
+<th>TMAX</th>
+<th>TMIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>count</th>
+<td>765</td>
+<td>765.000000</td>
+<td>765.000000</td>
+<td>765.000000</td>
+</tr>
+<tr>
+<th>mean</th>
+<td>2018-07-01 17:07:45.882353</td>
+<td>5.360392</td>
+<td>2649.175294</td>
+<td>-15.914379</td>
+</tr>
+<tr>
+<th>min</th>
+<td>2018-01-01 00:00:00</td>
+<td>0.000000</td>
+<td>-11.700000</td>
+<td>-40.000000</td>
+</tr>
+<tr>
+<th>25%</th>
+<td>2018-04-04 00:00:00</td>
+<td>0.000000</td>
+<td>13.300000</td>
+<td>-40.000000</td>
+</tr>
+<tr>
+<th>50%</th>
+<td>2018-07-01 00:00:00</td>
+<td>0.000000</td>
+<td>32.800000</td>
+<td>-11.100000</td>
+</tr>
+<tr>
+<th>75%</th>
+<td>2018-09-28 00:00:00</td>
+<td>5.800000</td>
+<td>5505.000000</td>
+<td>6.700000</td>
+</tr>
+<tr>
+<th>max</th>
+<td>2018-12-31 00:00:00</td>
+<td>61.700000</td>
+<td>5505.000000</td>
+<td>23.900000</td>
+</tr>
+<tr>
+<th>std</th>
+<td>NaN</td>
+<td>10.002138</td>
+<td>2744.156281</td>
+<td>24.242849</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<p>We will now take a look at the top five records in our dataframe before continue the cleaning examples.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">clean_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>station</th>
+<th>PRCP</th>
+<th>TMAX</th>
+<th>TMIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2018-01-01T00:00:00</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2018-01-02T00:00:00</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-8.3</td>
+<td>-16.1</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2018-01-03T00:00:00</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-4.4</td>
+<td>-13.9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h3>Categoricals<a rel="noopener" class="anchor-link" href="#Categoricals">&#182;</a></h3><p>When choosing which columns to set as categories, you will want to evaluate how many different values are available for the column.</p>
+<div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Example Data:</i></b> Keep in mind that the output are from the sample data and will not represent your dataset until these blocks are run.</span>
+</div>
+<p>Here in the example dataset, there are three values for the <code>Class</code> column, there are two values for the <code>Sex</code> column, and three values for the <code>Embarked</code> column, so we will convert those to categories for furture analysis. All other columns aside from <code>Survived</code> column that we converted to a bool, have a variety of values which cannot be easily placed into categories without first creating bins to use as categoricals which will we learn more about in the coming modules.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Categoricals</span>
+<span class="c1"># The station column contains a limited number of repeating values,</span>
+<span class="c1"># making it suitable to be treated as a categorical variable.</span>
+<span class="c1"># All other columns have a wide range of values and are left unchanged.</span>
+
+<span class="n">clean_data_with_categories</span> <span class="o">=</span> <span class="n">clean_data</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+    <span class="n">station</span><span class="o">=</span><span class="n">clean_data</span><span class="p">[</span><span class="s1">&#39;station&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Verify updated data types</span>
+<span class="n">clean_data_with_categories</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>date       datetime64[us]
+station          category
+PRCP              float64
+TMAX              float64
+TMIN              float64
+dtype: object</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">clean_data_with_categories</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output">
+<pre>&lt;class &#39;pandas.DataFrame&#39;&gt;
+RangeIndex: 765 entries, 0 to 764
+Data columns (total 5 columns):
+ #   Column   Non-Null Count  Dtype         
+---  ------   --------------  -----         
+ 0   date     765 non-null    datetime64[us]
+ 1   station  765 non-null    category      
+ 2   PRCP     765 non-null    float64       
+ 3   TMAX     765 non-null    float64       
+ 4   TMIN     765 non-null    float64       
+dtypes: category(1), datetime64[us](1), float64(3)
+memory usage: 24.8 KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">clean_data_with_categories</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>PRCP</th>
+<th>TMAX</th>
+<th>TMIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>count</th>
+<td>765</td>
+<td>765.000000</td>
+<td>765.000000</td>
+<td>765.000000</td>
+</tr>
+<tr>
+<th>mean</th>
+<td>2018-07-01 17:07:45.882353</td>
+<td>5.360392</td>
+<td>2649.175294</td>
+<td>-15.914379</td>
+</tr>
+<tr>
+<th>min</th>
+<td>2018-01-01 00:00:00</td>
+<td>0.000000</td>
+<td>-11.700000</td>
+<td>-40.000000</td>
+</tr>
+<tr>
+<th>25%</th>
+<td>2018-04-04 00:00:00</td>
+<td>0.000000</td>
+<td>13.300000</td>
+<td>-40.000000</td>
+</tr>
+<tr>
+<th>50%</th>
+<td>2018-07-01 00:00:00</td>
+<td>0.000000</td>
+<td>32.800000</td>
+<td>-11.100000</td>
+</tr>
+<tr>
+<th>75%</th>
+<td>2018-09-28 00:00:00</td>
+<td>5.800000</td>
+<td>5505.000000</td>
+<td>6.700000</td>
+</tr>
+<tr>
+<th>max</th>
+<td>2018-12-31 00:00:00</td>
+<td>61.700000</td>
+<td>5505.000000</td>
+<td>23.900000</td>
+</tr>
+<tr>
+<th>std</th>
+<td>NaN</td>
+<td>10.002138</td>
+<td>2744.156281</td>
+<td>24.242849</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">clean_data_with_categories</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>station</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>count</th>
+<td>765</td>
+</tr>
+<tr>
+<th>unique</th>
+<td>2</td>
+</tr>
+<tr>
+<th>top</th>
+<td>GHCND:USC00280907</td>
+</tr>
+<tr>
+<th>freq</th>
+<td>398</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput">
+<h2>Tabular Format<a rel="noopener" class="anchor-link" href="#Tabular-Format">&#182;</a></h2><div class="alert alert-block alert-danger">
+<span style="color:black;"><b><i>Example Data:</i></b> Keep in mind that the output are from the sample data and will not represent your dataset until these blocks are run. Validate your table represents your dataset before activity submission.</span>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">clean_data_with_categories</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult">
+<pre>765</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&#160;[&#160;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">clean_data_with_categories</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&#160;]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult">
+<div>
+
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>date</th>
+<th>station</th>
+<th>PRCP</th>
+<th>TMAX</th>
+<th>TMIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2018-01-01</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2018-01-01</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2018-01-01</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2018-01-02</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-8.3</td>
+<td>-16.1</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2018-01-03</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-4.4</td>
+<td>-13.9</td>
+</tr>
+<tr>
+<th>5</th>
+<td>2018-01-03</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-4.4</td>
+<td>-13.9</td>
+</tr>
+<tr>
+<th>6</th>
+<td>2018-01-03</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-4.4</td>
+<td>-13.9</td>
+</tr>
+<tr>
+<th>7</th>
+<td>2018-01-04</td>
+<td>?</td>
+<td>20.6</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>8</th>
+<td>2018-01-04</td>
+<td>?</td>
+<td>20.6</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>9</th>
+<td>2018-01-05</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>10</th>
+<td>2018-01-05</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>11</th>
+<td>2018-01-05</td>
+<td>GHCND:USC00280907</td>
+<td>14.2</td>
+<td>-4.4</td>
+<td>-13.9</td>
+</tr>
+<tr>
+<th>12</th>
+<td>2018-01-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-10.0</td>
+<td>-15.6</td>
+</tr>
+<tr>
+<th>13</th>
+<td>2018-01-07</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-11.7</td>
+<td>-17.2</td>
+</tr>
+<tr>
+<th>14</th>
+<td>2018-01-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>15</th>
+<td>2018-01-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>16</th>
+<td>2018-01-08</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-7.8</td>
+<td>-16.7</td>
+</tr>
+<tr>
+<th>17</th>
+<td>2018-01-10</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>18</th>
+<td>2018-01-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>-7.8</td>
+</tr>
+<tr>
+<th>19</th>
+<td>2018-01-11</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>4.4</td>
+<td>-7.8</td>
+</tr>
+<tr>
+<th>20</th>
+<td>2018-01-12</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>9.4</td>
+<td>0.6</td>
+</tr>
+<tr>
+<th>21</th>
+<td>2018-01-12</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>22</th>
+<td>2018-01-12</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>23</th>
+<td>2018-01-12</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>9.4</td>
+<td>0.6</td>
+</tr>
+<tr>
+<th>24</th>
+<td>2018-01-12</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>9.4</td>
+<td>0.6</td>
+</tr>
+<tr>
+<th>25</th>
+<td>2018-01-13</td>
+<td>?</td>
+<td>17.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>26</th>
+<td>2018-01-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.2</td>
+<td>-11.1</td>
+</tr>
+<tr>
+<th>27</th>
+<td>2018-01-14</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>28</th>
+<td>2018-01-14</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>29</th>
+<td>2018-01-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.2</td>
+<td>-11.1</td>
+</tr>
+<tr>
+<th>30</th>
+<td>2018-01-15</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-5.0</td>
+<td>-11.7</td>
+</tr>
+<tr>
+<th>31</th>
+<td>2018-01-16</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-1.1</td>
+<td>-9.4</td>
+</tr>
+<tr>
+<th>32</th>
+<td>2018-01-16</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-1.1</td>
+<td>-9.4</td>
+</tr>
+<tr>
+<th>33</th>
+<td>2018-01-17</td>
+<td>?</td>
+<td>4.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>34</th>
+<td>2018-01-17</td>
+<td>GHCND:USC00280907</td>
+<td>3.0</td>
+<td>0.6</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<th>35</th>
+<td>2018-01-17</td>
+<td>GHCND:USC00280907</td>
+<td>3.0</td>
+<td>0.6</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<th>36</th>
+<td>2018-01-18</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>0.0</td>
+<td>-11.1</td>
+</tr>
+<tr>
+<th>37</th>
+<td>2018-01-18</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>0.0</td>
+<td>-11.1</td>
+</tr>
+<tr>
+<th>38</th>
+<td>2018-01-18</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>0.0</td>
+<td>-11.1</td>
+</tr>
+<tr>
+<th>39</th>
+<td>2018-01-19</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-1.1</td>
+<td>-11.7</td>
+</tr>
+<tr>
+<th>40</th>
+<td>2018-01-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>41</th>
+<td>2018-01-19</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-1.1</td>
+<td>-11.7</td>
+</tr>
+<tr>
+<th>42</th>
+<td>2018-01-20</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.8</td>
+<td>-11.7</td>
+</tr>
+<tr>
+<th>43</th>
+<td>2018-01-21</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>44</th>
+<td>2018-01-21</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>8.3</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>45</th>
+<td>2018-01-22</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>46</th>
+<td>2018-01-23</td>
+<td>GHCND:USC00280907</td>
+<td>18.0</td>
+<td>8.9</td>
+<td>2.2</td>
+</tr>
+<tr>
+<th>47</th>
+<td>2018-01-23</td>
+<td>?</td>
+<td>3.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>48</th>
+<td>2018-01-24</td>
+<td>GHCND:USC00280907</td>
+<td>3.3</td>
+<td>13.3</td>
+<td>3.3</td>
+</tr>
+<tr>
+<th>49</th>
+<td>2018-01-24</td>
+<td>?</td>
+<td>5.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>50</th>
+<td>2018-01-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>51</th>
+<td>2018-01-25</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>4.4</td>
+<td>-6.7</td>
+</tr>
+<tr>
+<th>52</th>
+<td>2018-01-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-7.2</td>
+</tr>
+<tr>
+<th>53</th>
+<td>2018-01-26</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>54</th>
+<td>2018-01-26</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>55</th>
+<td>2018-01-27</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>56</th>
+<td>2018-01-28</td>
+<td>GHCND:USC00280907</td>
+<td>1.5</td>
+<td>11.1</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<th>57</th>
+<td>2018-01-28</td>
+<td>GHCND:USC00280907</td>
+<td>1.5</td>
+<td>11.1</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<th>58</th>
+<td>2018-01-30</td>
+<td>?</td>
+<td>1.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>59</th>
+<td>2018-01-30</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.7</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>60</th>
+<td>2018-01-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.7</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<th>61</th>
+<td>2018-01-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.7</td>
+<td>-10.0</td>
+</tr>
+<tr>
+<th>62</th>
+<td>2018-02-01</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>63</th>
+<td>2018-02-01</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>64</th>
+<td>2018-02-02</td>
+<td>?</td>
+<td>3.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>65</th>
+<td>2018-02-02</td>
+<td>?</td>
+<td>3.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>66</th>
+<td>2018-02-05</td>
+<td>?</td>
+<td>21.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>67</th>
+<td>2018-02-05</td>
+<td>?</td>
+<td>21.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>68</th>
+<td>2018-02-05</td>
+<td>GHCND:USC00280907</td>
+<td>19.8</td>
+<td>2.8</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>69</th>
+<td>2018-02-05</td>
+<td>GHCND:USC00280907</td>
+<td>19.8</td>
+<td>2.8</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>70</th>
+<td>2018-02-05</td>
+<td>?</td>
+<td>21.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>71</th>
+<td>2018-02-05</td>
+<td>GHCND:USC00280907</td>
+<td>19.8</td>
+<td>2.8</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>72</th>
+<td>2018-02-06</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>73</th>
+<td>2018-02-08</td>
+<td>GHCND:USC00280907</td>
+<td>24.4</td>
+<td>3.3</td>
+<td>-5.6</td>
+</tr>
+<tr>
+<th>74</th>
+<td>2018-02-08</td>
+<td>GHCND:USC00280907</td>
+<td>24.4</td>
+<td>3.3</td>
+<td>-5.6</td>
+</tr>
+<tr>
+<th>75</th>
+<td>2018-02-08</td>
+<td>?</td>
+<td>24.6</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>76</th>
+<td>2018-02-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>77</th>
+<td>2018-02-09</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-1.1</td>
+<td>-8.3</td>
+</tr>
+<tr>
+<th>78</th>
+<td>2018-02-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>79</th>
+<td>2018-02-09</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-1.1</td>
+<td>-8.3</td>
+</tr>
+<tr>
+<th>80</th>
+<td>2018-02-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-8.3</td>
+</tr>
+<tr>
+<th>81</th>
+<td>2018-02-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-8.3</td>
+</tr>
+<tr>
+<th>82</th>
+<td>2018-02-10</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>83</th>
+<td>2018-02-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>-8.3</td>
+</tr>
+<tr>
+<th>84</th>
+<td>2018-02-11</td>
+<td>GHCND:USC00280907</td>
+<td>18.0</td>
+<td>5.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>85</th>
+<td>2018-02-11</td>
+<td>?</td>
+<td>31.2</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>86</th>
+<td>2018-02-11</td>
+<td>GHCND:USC00280907</td>
+<td>18.0</td>
+<td>5.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>87</th>
+<td>2018-02-12</td>
+<td>GHCND:USC00280907</td>
+<td>9.4</td>
+<td>13.9</td>
+<td>3.3</td>
+</tr>
+<tr>
+<th>88</th>
+<td>2018-02-13</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<th>89</th>
+<td>2018-02-13</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<th>90</th>
+<td>2018-02-14</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>91</th>
+<td>2018-02-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.5</td>
+<td>2.2</td>
+<td>-4.4</td>
+</tr>
+<tr>
+<th>92</th>
+<td>2018-02-14</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>93</th>
+<td>2018-02-15</td>
+<td>?</td>
+<td>1.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>94</th>
+<td>2018-02-15</td>
+<td>GHCND:USC00280907</td>
+<td>0.5</td>
+<td>9.4</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>95</th>
+<td>2018-02-15</td>
+<td>?</td>
+<td>1.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>96</th>
+<td>2018-02-16</td>
+<td>?</td>
+<td>3.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>97</th>
+<td>2018-02-16</td>
+<td>GHCND:USC00280907</td>
+<td>3.3</td>
+<td>13.3</td>
+<td>3.3</td>
+</tr>
+<tr>
+<th>98</th>
+<td>2018-02-16</td>
+<td>GHCND:USC00280907</td>
+<td>3.3</td>
+<td>13.3</td>
+<td>3.3</td>
+</tr>
+<tr>
+<th>99</th>
+<td>2018-02-16</td>
+<td>?</td>
+<td>3.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>100</th>
+<td>2018-02-17</td>
+<td>?</td>
+<td>1.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>101</th>
+<td>2018-02-17</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>13.3</td>
+<td>-4.4</td>
+</tr>
+<tr>
+<th>102</th>
+<td>2018-02-18</td>
+<td>GHCND:USC00280907</td>
+<td>18.8</td>
+<td>3.9</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>103</th>
+<td>2018-02-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>104</th>
+<td>2018-02-19</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<th>105</th>
+<td>2018-02-20</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>7.2</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>106</th>
+<td>2018-02-21</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>17.8</td>
+<td>6.1</td>
+</tr>
+<tr>
+<th>107</th>
+<td>2018-02-22</td>
+<td>GHCND:USC00280907</td>
+<td>8.6</td>
+<td>23.9</td>
+<td>5.6</td>
+</tr>
+<tr>
+<th>108</th>
+<td>2018-02-22</td>
+<td>?</td>
+<td>6.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>109</th>
+<td>2018-02-23</td>
+<td>GHCND:USC00280907</td>
+<td>7.4</td>
+<td>7.2</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>110</th>
+<td>2018-02-23</td>
+<td>GHCND:USC00280907</td>
+<td>7.4</td>
+<td>7.2</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>111</th>
+<td>2018-02-23</td>
+<td>?</td>
+<td>6.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>112</th>
+<td>2018-02-25</td>
+<td>?</td>
+<td>21.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>113</th>
+<td>2018-02-25</td>
+<td>GHCND:USC00280907</td>
+<td>16.5</td>
+<td>11.1</td>
+<td>3.9</td>
+</tr>
+<tr>
+<th>114</th>
+<td>2018-02-26</td>
+<td>?</td>
+<td>3.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>115</th>
+<td>2018-02-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>10.6</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>116</th>
+<td>2018-02-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>10.6</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>117</th>
+<td>2018-02-28</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>12.2</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>118</th>
+<td>2018-02-28</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>119</th>
+<td>2018-02-28</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>120</th>
+<td>2018-03-01</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>14.4</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>121</th>
+<td>2018-03-01</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>14.4</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>122</th>
+<td>2018-03-01</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>14.4</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>123</th>
+<td>2018-03-01</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>14.4</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>124</th>
+<td>2018-03-03</td>
+<td>GHCND:USC00280907</td>
+<td>25.4</td>
+<td>2.8</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>125</th>
+<td>2018-03-03</td>
+<td>?</td>
+<td>18.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>126</th>
+<td>2018-03-04</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>127</th>
+<td>2018-03-04</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>128</th>
+<td>2018-03-04</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>129</th>
+<td>2018-03-05</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>130</th>
+<td>2018-03-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>131</th>
+<td>2018-03-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>-2.2</td>
+</tr>
+<tr>
+<th>132</th>
+<td>2018-03-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>-2.2</td>
+</tr>
+<tr>
+<th>133</th>
+<td>2018-03-06</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>134</th>
+<td>2018-03-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>-2.2</td>
+</tr>
+<tr>
+<th>135</th>
+<td>2018-03-08</td>
+<td>GHCND:USC00280907</td>
+<td>48.8</td>
+<td>1.1</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>136</th>
+<td>2018-03-08</td>
+<td>GHCND:USC00280907</td>
+<td>48.8</td>
+<td>1.1</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>137</th>
+<td>2018-03-08</td>
+<td>?</td>
+<td>28.4</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>138</th>
+<td>2018-03-08</td>
+<td>GHCND:USC00280907</td>
+<td>48.8</td>
+<td>1.1</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>139</th>
+<td>2018-03-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>140</th>
+<td>2018-03-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>141</th>
+<td>2018-03-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>4.4</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>142</th>
+<td>2018-03-10</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>143</th>
+<td>2018-03-12</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>144</th>
+<td>2018-03-12</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>145</th>
+<td>2018-03-13</td>
+<td>GHCND:USC00280907</td>
+<td>4.1</td>
+<td>5.6</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>146</th>
+<td>2018-03-13</td>
+<td>?</td>
+<td>3.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>147</th>
+<td>2018-03-14</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>148</th>
+<td>2018-03-15</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.3</td>
+<td>-2.2</td>
+</tr>
+<tr>
+<th>149</th>
+<td>2018-03-15</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>150</th>
+<td>2018-03-16</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.7</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>151</th>
+<td>2018-03-16</td>
+<td>?</td>
+<td>1.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>152</th>
+<td>2018-03-17</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.9</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>153</th>
+<td>2018-03-17</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>154</th>
+<td>2018-03-18</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>155</th>
+<td>2018-03-19</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>-4.4</td>
+</tr>
+<tr>
+<th>156</th>
+<td>2018-03-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>157</th>
+<td>2018-03-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>158</th>
+<td>2018-03-20</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>159</th>
+<td>2018-03-21</td>
+<td>?</td>
+<td>6.6</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>160</th>
+<td>2018-03-21</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.8</td>
+<td>-2.8</td>
+</tr>
+<tr>
+<th>161</th>
+<td>2018-03-21</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.8</td>
+<td>-2.8</td>
+</tr>
+<tr>
+<th>162</th>
+<td>2018-03-21</td>
+<td>?</td>
+<td>6.6</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>163</th>
+<td>2018-03-22</td>
+<td>GHCND:USC00280907</td>
+<td>17.3</td>
+<td>1.7</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>164</th>
+<td>2018-03-22</td>
+<td>GHCND:USC00280907</td>
+<td>17.3</td>
+<td>1.7</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>165</th>
+<td>2018-03-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>8.9</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>166</th>
+<td>2018-03-23</td>
+<td>?</td>
+<td>1.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>167</th>
+<td>2018-03-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>8.9</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>168</th>
+<td>2018-03-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>169</th>
+<td>2018-03-25</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>8.3</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>170</th>
+<td>2018-03-25</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>8.3</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>171</th>
+<td>2018-03-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>172</th>
+<td>2018-03-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>173</th>
+<td>2018-03-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>-3.9</td>
+</tr>
+<tr>
+<th>174</th>
+<td>2018-03-27</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>175</th>
+<td>2018-03-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>176</th>
+<td>2018-03-27</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>177</th>
+<td>2018-03-29</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>10.6</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>178</th>
+<td>2018-03-29</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>179</th>
+<td>2018-03-30</td>
+<td>?</td>
+<td>0.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>180</th>
+<td>2018-03-30</td>
+<td>?</td>
+<td>0.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>181</th>
+<td>2018-03-31</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>182</th>
+<td>2018-03-31</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>13.3</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>183</th>
+<td>2018-03-31</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>13.3</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>184</th>
+<td>2018-03-31</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>13.3</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>185</th>
+<td>2018-04-02</td>
+<td>GHCND:USC00280907</td>
+<td>9.1</td>
+<td>12.8</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>186</th>
+<td>2018-04-02</td>
+<td>?</td>
+<td>14.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>187</th>
+<td>2018-04-02</td>
+<td>GHCND:USC00280907</td>
+<td>9.1</td>
+<td>12.8</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>188</th>
+<td>2018-04-03</td>
+<td>?</td>
+<td>4.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>189</th>
+<td>2018-04-03</td>
+<td>?</td>
+<td>4.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>190</th>
+<td>2018-04-03</td>
+<td>?</td>
+<td>4.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>191</th>
+<td>2018-04-04</td>
+<td>GHCND:USC00280907</td>
+<td>11.4</td>
+<td>3.9</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>192</th>
+<td>2018-04-04</td>
+<td>GHCND:USC00280907</td>
+<td>11.4</td>
+<td>3.9</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>193</th>
+<td>2018-04-04</td>
+<td>GHCND:USC00280907</td>
+<td>11.4</td>
+<td>3.9</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>194</th>
+<td>2018-04-04</td>
+<td>GHCND:USC00280907</td>
+<td>11.4</td>
+<td>3.9</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>195</th>
+<td>2018-04-05</td>
+<td>GHCND:USC00280907</td>
+<td>0.3</td>
+<td>11.7</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>196</th>
+<td>2018-04-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>197</th>
+<td>2018-04-06</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>198</th>
+<td>2018-04-07</td>
+<td>GHCND:USC00280907</td>
+<td>0.8</td>
+<td>13.9</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>199</th>
+<td>2018-04-07</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>200</th>
+<td>2018-04-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>201</th>
+<td>2018-04-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>202</th>
+<td>2018-04-09</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>-2.2</td>
+</tr>
+<tr>
+<th>203</th>
+<td>2018-04-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.5</td>
+<td>8.9</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>204</th>
+<td>2018-04-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.5</td>
+<td>8.9</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>205</th>
+<td>2018-04-11</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>8.9</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>206</th>
+<td>2018-04-12</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>207</th>
+<td>2018-04-12</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>208</th>
+<td>2018-04-12</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>209</th>
+<td>2018-04-12</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>210</th>
+<td>2018-04-13</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>211</th>
+<td>2018-04-13</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>212</th>
+<td>2018-04-14</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>213</th>
+<td>2018-04-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.7</td>
+<td>11.1</td>
+</tr>
+<tr>
+<th>214</th>
+<td>2018-04-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.7</td>
+<td>11.1</td>
+</tr>
+<tr>
+<th>215</th>
+<td>2018-04-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.7</td>
+<td>11.1</td>
+</tr>
+<tr>
+<th>216</th>
+<td>2018-04-14</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>217</th>
+<td>2018-04-15</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>218</th>
+<td>2018-04-17</td>
+<td>?</td>
+<td>26.2</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>219</th>
+<td>2018-04-18</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>7.2</td>
+<td>2.2</td>
+</tr>
+<tr>
+<th>220</th>
+<td>2018-04-18</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>7.2</td>
+<td>2.2</td>
+</tr>
+<tr>
+<th>221</th>
+<td>2018-04-19</td>
+<td>?</td>
+<td>2.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>222</th>
+<td>2018-04-19</td>
+<td>GHCND:USC00280907</td>
+<td>6.9</td>
+<td>11.1</td>
+<td>2.8</td>
+</tr>
+<tr>
+<th>223</th>
+<td>2018-04-19</td>
+<td>?</td>
+<td>2.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>224</th>
+<td>2018-04-20</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>7.8</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>225</th>
+<td>2018-04-22</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>15.6</td>
+<td>4.4</td>
+</tr>
+<tr>
+<th>226</th>
+<td>2018-04-22</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>227</th>
+<td>2018-04-22</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>15.6</td>
+<td>4.4</td>
+</tr>
+<tr>
+<th>228</th>
+<td>2018-04-22</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>229</th>
+<td>2018-04-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>18.3</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>230</th>
+<td>2018-04-24</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>231</th>
+<td>2018-04-25</td>
+<td>GHCND:USC00280907</td>
+<td>10.2</td>
+<td>18.9</td>
+<td>2.2</td>
+</tr>
+<tr>
+<th>232</th>
+<td>2018-04-25</td>
+<td>GHCND:USC00280907</td>
+<td>10.2</td>
+<td>18.9</td>
+<td>2.2</td>
+</tr>
+<tr>
+<th>233</th>
+<td>2018-04-25</td>
+<td>GHCND:USC00280907</td>
+<td>10.2</td>
+<td>18.9</td>
+<td>2.2</td>
+</tr>
+<tr>
+<th>234</th>
+<td>2018-04-25</td>
+<td>GHCND:USC00280907</td>
+<td>10.2</td>
+<td>18.9</td>
+<td>2.2</td>
+</tr>
+<tr>
+<th>235</th>
+<td>2018-04-26</td>
+<td>GHCND:USC00280907</td>
+<td>28.4</td>
+<td>15.0</td>
+<td>10.6</td>
+</tr>
+<tr>
+<th>236</th>
+<td>2018-04-26</td>
+<td>?</td>
+<td>9.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>237</th>
+<td>2018-04-27</td>
+<td>?</td>
+<td>1.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>238</th>
+<td>2018-04-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>20.0</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>239</th>
+<td>2018-04-27</td>
+<td>?</td>
+<td>1.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>240</th>
+<td>2018-04-28</td>
+<td>GHCND:USC00280907</td>
+<td>2.8</td>
+<td>12.8</td>
+<td>7.8</td>
+</tr>
+<tr>
+<th>241</th>
+<td>2018-04-28</td>
+<td>?</td>
+<td>1.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>242</th>
+<td>2018-04-28</td>
+<td>?</td>
+<td>1.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>243</th>
+<td>2018-04-29</td>
+<td>?</td>
+<td>8.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>244</th>
+<td>2018-04-29</td>
+<td>GHCND:USC00280907</td>
+<td>9.4</td>
+<td>21.1</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>245</th>
+<td>2018-04-29</td>
+<td>GHCND:USC00280907</td>
+<td>9.4</td>
+<td>21.1</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>246</th>
+<td>2018-04-29</td>
+<td>GHCND:USC00280907</td>
+<td>9.4</td>
+<td>21.1</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>247</th>
+<td>2018-04-30</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>13.3</td>
+<td>7.2</td>
+</tr>
+<tr>
+<th>248</th>
+<td>2018-05-01</td>
+<td>?</td>
+<td>2.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>249</th>
+<td>2018-05-01</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>9.4</td>
+<td>3.3</td>
+</tr>
+<tr>
+<th>250</th>
+<td>2018-05-01</td>
+<td>?</td>
+<td>2.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>251</th>
+<td>2018-05-02</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.1</td>
+<td>3.9</td>
+</tr>
+<tr>
+<th>252</th>
+<td>2018-05-02</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>253</th>
+<td>2018-05-03</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>254</th>
+<td>2018-05-04</td>
+<td>?</td>
+<td>0.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>255</th>
+<td>2018-05-05</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>28.3</td>
+<td>15.0</td>
+</tr>
+<tr>
+<th>256</th>
+<td>2018-05-05</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>28.3</td>
+<td>15.0</td>
+</tr>
+<tr>
+<th>257</th>
+<td>2018-05-06</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>258</th>
+<td>2018-05-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.8</td>
+<td>23.9</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>259</th>
+<td>2018-05-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.8</td>
+<td>23.9</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>260</th>
+<td>2018-05-06</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>261</th>
+<td>2018-05-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>262</th>
+<td>2018-05-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>263</th>
+<td>2018-05-07</td>
+<td>GHCND:USC00280907</td>
+<td>5.6</td>
+<td>16.7</td>
+<td>9.4</td>
+</tr>
+<tr>
+<th>264</th>
+<td>2018-05-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>265</th>
+<td>2018-05-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>266</th>
+<td>2018-05-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>267</th>
+<td>2018-05-10</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>268</th>
+<td>2018-05-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.1</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>269</th>
+<td>2018-05-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.1</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>270</th>
+<td>2018-05-11</td>
+<td>?</td>
+<td>8.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>271</th>
+<td>2018-05-11</td>
+<td>GHCND:USC00280907</td>
+<td>12.2</td>
+<td>23.3</td>
+<td>10.0</td>
+</tr>
+<tr>
+<th>272</th>
+<td>2018-05-11</td>
+<td>GHCND:USC00280907</td>
+<td>12.2</td>
+<td>23.3</td>
+<td>10.0</td>
+</tr>
+<tr>
+<th>273</th>
+<td>2018-05-11</td>
+<td>?</td>
+<td>8.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>274</th>
+<td>2018-05-12</td>
+<td>?</td>
+<td>4.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>275</th>
+<td>2018-05-12</td>
+<td>?</td>
+<td>4.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>276</th>
+<td>2018-05-12</td>
+<td>?</td>
+<td>4.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>277</th>
+<td>2018-05-12</td>
+<td>GHCND:USC00280907</td>
+<td>3.0</td>
+<td>22.2</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>278</th>
+<td>2018-05-13</td>
+<td>GHCND:USC00280907</td>
+<td>5.1</td>
+<td>12.8</td>
+<td>9.4</td>
+</tr>
+<tr>
+<th>279</th>
+<td>2018-05-13</td>
+<td>?</td>
+<td>2.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>280</th>
+<td>2018-05-14</td>
+<td>GHCND:USC00280907</td>
+<td>5.8</td>
+<td>11.7</td>
+<td>10.0</td>
+</tr>
+<tr>
+<th>281</th>
+<td>2018-05-15</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>282</th>
+<td>2018-05-15</td>
+<td>GHCND:USC00280907</td>
+<td>0.5</td>
+<td>23.3</td>
+<td>10.6</td>
+</tr>
+<tr>
+<th>283</th>
+<td>2018-05-17</td>
+<td>?</td>
+<td>13.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>284</th>
+<td>2018-05-17</td>
+<td>?</td>
+<td>13.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>285</th>
+<td>2018-05-18</td>
+<td>?</td>
+<td>0.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>286</th>
+<td>2018-05-19</td>
+<td>?</td>
+<td>9.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>287</th>
+<td>2018-05-19</td>
+<td>GHCND:USC00280907</td>
+<td>3.0</td>
+<td>18.9</td>
+<td>7.8</td>
+</tr>
+<tr>
+<th>288</th>
+<td>2018-05-20</td>
+<td>?</td>
+<td>9.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>289</th>
+<td>2018-05-20</td>
+<td>?</td>
+<td>9.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>290</th>
+<td>2018-05-20</td>
+<td>GHCND:USC00280907</td>
+<td>15.2</td>
+<td>14.4</td>
+<td>7.8</td>
+</tr>
+<tr>
+<th>291</th>
+<td>2018-05-20</td>
+<td>?</td>
+<td>9.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>292</th>
+<td>2018-05-20</td>
+<td>?</td>
+<td>9.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>293</th>
+<td>2018-05-20</td>
+<td>?</td>
+<td>9.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>294</th>
+<td>2018-05-21</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>295</th>
+<td>2018-05-21</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>296</th>
+<td>2018-05-21</td>
+<td>GHCND:USC00280907</td>
+<td>0.8</td>
+<td>27.2</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>297</th>
+<td>2018-05-22</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>298</th>
+<td>2018-05-23</td>
+<td>GHCND:USC00280907</td>
+<td>16.8</td>
+<td>19.4</td>
+<td>13.3</td>
+</tr>
+<tr>
+<th>299</th>
+<td>2018-05-23</td>
+<td>?</td>
+<td>17.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>300</th>
+<td>2018-05-24</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>301</th>
+<td>2018-05-24</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.1</td>
+<td>15.0</td>
+</tr>
+<tr>
+<th>302</th>
+<td>2018-05-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>303</th>
+<td>2018-05-26</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>304</th>
+<td>2018-05-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>29.4</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>305</th>
+<td>2018-05-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>29.4</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>306</th>
+<td>2018-05-27</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>31.7</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>307</th>
+<td>2018-05-27</td>
+<td>?</td>
+<td>9.4</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>308</th>
+<td>2018-05-27</td>
+<td>?</td>
+<td>9.4</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>309</th>
+<td>2018-05-27</td>
+<td>?</td>
+<td>9.4</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>310</th>
+<td>2018-05-28</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>311</th>
+<td>2018-05-28</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>312</th>
+<td>2018-05-28</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>313</th>
+<td>2018-05-29</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>314</th>
+<td>2018-05-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>315</th>
+<td>2018-05-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>316</th>
+<td>2018-05-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>317</th>
+<td>2018-05-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>318</th>
+<td>2018-05-31</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>319</th>
+<td>2018-05-31</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>320</th>
+<td>2018-05-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>25.6</td>
+<td>15.0</td>
+</tr>
+<tr>
+<th>321</th>
+<td>2018-06-04</td>
+<td>?</td>
+<td>10.2</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>322</th>
+<td>2018-06-04</td>
+<td>GHCND:USC00280907</td>
+<td>16.8</td>
+<td>18.9</td>
+<td>10.6</td>
+</tr>
+<tr>
+<th>323</th>
+<td>2018-06-04</td>
+<td>GHCND:USC00280907</td>
+<td>16.8</td>
+<td>18.9</td>
+<td>10.6</td>
+</tr>
+<tr>
+<th>324</th>
+<td>2018-06-04</td>
+<td>?</td>
+<td>10.2</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>325</th>
+<td>2018-06-05</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>23.3</td>
+<td>11.1</td>
+</tr>
+<tr>
+<th>326</th>
+<td>2018-06-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>327</th>
+<td>2018-06-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>23.3</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>328</th>
+<td>2018-06-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>329</th>
+<td>2018-06-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>330</th>
+<td>2018-06-08</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>22.2</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>331</th>
+<td>2018-06-08</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>22.2</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>332</th>
+<td>2018-06-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>333</th>
+<td>2018-06-08</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>22.2</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>334</th>
+<td>2018-06-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>335</th>
+<td>2018-06-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>336</th>
+<td>2018-06-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>337</th>
+<td>2018-06-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>338</th>
+<td>2018-06-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.7</td>
+<td>16.7</td>
+</tr>
+<tr>
+<th>339</th>
+<td>2018-06-10</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>340</th>
+<td>2018-06-10</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>341</th>
+<td>2018-06-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.7</td>
+<td>16.7</td>
+</tr>
+<tr>
+<th>342</th>
+<td>2018-06-11</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>343</th>
+<td>2018-06-12</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>344</th>
+<td>2018-06-12</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>345</th>
+<td>2018-06-13</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>24.4</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>346</th>
+<td>2018-06-13</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>347</th>
+<td>2018-06-13</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>348</th>
+<td>2018-06-14</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>349</th>
+<td>2018-06-14</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>350</th>
+<td>2018-06-15</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>351</th>
+<td>2018-06-16</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>352</th>
+<td>2018-06-16</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>25.0</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>353</th>
+<td>2018-06-16</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>25.0</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>354</th>
+<td>2018-06-17</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>28.3</td>
+<td>13.3</td>
+</tr>
+<tr>
+<th>355</th>
+<td>2018-06-18</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>356</th>
+<td>2018-06-18</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.2</td>
+<td>15.0</td>
+</tr>
+<tr>
+<th>357</th>
+<td>2018-06-18</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.2</td>
+<td>15.0</td>
+</tr>
+<tr>
+<th>358</th>
+<td>2018-06-18</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.2</td>
+<td>15.0</td>
+</tr>
+<tr>
+<th>359</th>
+<td>2018-06-18</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.2</td>
+<td>15.0</td>
+</tr>
+<tr>
+<th>360</th>
+<td>2018-06-19</td>
+<td>GHCND:USC00280907</td>
+<td>5.3</td>
+<td>32.2</td>
+<td>18.9</td>
+</tr>
+<tr>
+<th>361</th>
+<td>2018-06-19</td>
+<td>?</td>
+<td>3.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>362</th>
+<td>2018-06-21</td>
+<td>?</td>
+<td>17.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>363</th>
+<td>2018-06-22</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>29.4</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>364</th>
+<td>2018-06-23</td>
+<td>?</td>
+<td>1.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>365</th>
+<td>2018-06-24</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>366</th>
+<td>2018-06-24</td>
+<td>GHCND:USC00280907</td>
+<td>0.8</td>
+<td>20.0</td>
+<td>16.1</td>
+</tr>
+<tr>
+<th>367</th>
+<td>2018-06-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>368</th>
+<td>2018-06-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>369</th>
+<td>2018-06-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.1</td>
+<td>14.4</td>
+</tr>
+<tr>
+<th>370</th>
+<td>2018-06-27</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>371</th>
+<td>2018-06-27</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>372</th>
+<td>2018-06-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.1</td>
+<td>14.4</td>
+</tr>
+<tr>
+<th>373</th>
+<td>2018-06-28</td>
+<td>GHCND:USC00280907</td>
+<td>16.0</td>
+<td>22.8</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>374</th>
+<td>2018-06-28</td>
+<td>GHCND:USC00280907</td>
+<td>16.0</td>
+<td>22.8</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>375</th>
+<td>2018-06-28</td>
+<td>GHCND:USC00280907</td>
+<td>16.0</td>
+<td>22.8</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>376</th>
+<td>2018-06-28</td>
+<td>?</td>
+<td>16.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>377</th>
+<td>2018-06-29</td>
+<td>GHCND:USC00280907</td>
+<td>1.5</td>
+<td>30.0</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>378</th>
+<td>2018-06-29</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>379</th>
+<td>2018-06-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>380</th>
+<td>2018-06-30</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.2</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>381</th>
+<td>2018-06-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>382</th>
+<td>2018-07-01</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>383</th>
+<td>2018-07-02</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>384</th>
+<td>2018-07-02</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>35.0</td>
+<td>20.0</td>
+</tr>
+<tr>
+<th>385</th>
+<td>2018-07-03</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>386</th>
+<td>2018-07-04</td>
+<td>?</td>
+<td>16.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>387</th>
+<td>2018-07-04</td>
+<td>GHCND:USC00280907</td>
+<td>2.8</td>
+<td>35.0</td>
+<td>22.8</td>
+</tr>
+<tr>
+<th>388</th>
+<td>2018-07-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>389</th>
+<td>2018-07-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>390</th>
+<td>2018-07-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>391</th>
+<td>2018-07-05</td>
+<td>GHCND:USC00280907</td>
+<td>2.5</td>
+<td>32.2</td>
+<td>22.2</td>
+</tr>
+<tr>
+<th>392</th>
+<td>2018-07-05</td>
+<td>GHCND:USC00280907</td>
+<td>2.5</td>
+<td>32.2</td>
+<td>22.2</td>
+</tr>
+<tr>
+<th>393</th>
+<td>2018-07-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>394</th>
+<td>2018-07-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>395</th>
+<td>2018-07-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>396</th>
+<td>2018-07-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.8</td>
+<td>23.9</td>
+</tr>
+<tr>
+<th>397</th>
+<td>2018-07-07</td>
+<td>?</td>
+<td>1.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>398</th>
+<td>2018-07-07</td>
+<td>GHCND:USC00280907</td>
+<td>0.3</td>
+<td>28.3</td>
+<td>13.3</td>
+</tr>
+<tr>
+<th>399</th>
+<td>2018-07-08</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.1</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>400</th>
+<td>2018-07-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>401</th>
+<td>2018-07-08</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.1</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>402</th>
+<td>2018-07-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>403</th>
+<td>2018-07-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>404</th>
+<td>2018-07-09</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>29.4</td>
+<td>13.3</td>
+</tr>
+<tr>
+<th>405</th>
+<td>2018-07-10</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>406</th>
+<td>2018-07-11</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>407</th>
+<td>2018-07-11</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>408</th>
+<td>2018-07-11</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>409</th>
+<td>2018-07-11</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>410</th>
+<td>2018-07-11</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>33.3</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>411</th>
+<td>2018-07-12</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>30.0</td>
+<td>18.9</td>
+</tr>
+<tr>
+<th>412</th>
+<td>2018-07-12</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>413</th>
+<td>2018-07-13</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>414</th>
+<td>2018-07-14</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>415</th>
+<td>2018-07-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>31.1</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>416</th>
+<td>2018-07-15</td>
+<td>GHCND:USC00280907</td>
+<td>18.3</td>
+<td>31.7</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>417</th>
+<td>2018-07-15</td>
+<td>?</td>
+<td>14.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>418</th>
+<td>2018-07-15</td>
+<td>GHCND:USC00280907</td>
+<td>18.3</td>
+<td>31.7</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>419</th>
+<td>2018-07-16</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>420</th>
+<td>2018-07-17</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.8</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>421</th>
+<td>2018-07-18</td>
+<td>GHCND:USC00280907</td>
+<td>32.5</td>
+<td>31.1</td>
+<td>16.1</td>
+</tr>
+<tr>
+<th>422</th>
+<td>2018-07-20</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>423</th>
+<td>2018-07-22</td>
+<td>?</td>
+<td>29.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>424</th>
+<td>2018-07-22</td>
+<td>GHCND:USC00280907</td>
+<td>44.5</td>
+<td>26.7</td>
+<td>16.7</td>
+</tr>
+<tr>
+<th>425</th>
+<td>2018-07-22</td>
+<td>GHCND:USC00280907</td>
+<td>44.5</td>
+<td>26.7</td>
+<td>16.7</td>
+</tr>
+<tr>
+<th>426</th>
+<td>2018-07-23</td>
+<td>?</td>
+<td>12.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>427</th>
+<td>2018-07-24</td>
+<td>?</td>
+<td>2.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>428</th>
+<td>2018-07-24</td>
+<td>GHCND:USC00280907</td>
+<td>11.4</td>
+<td>28.3</td>
+<td>23.3</td>
+</tr>
+<tr>
+<th>429</th>
+<td>2018-07-24</td>
+<td>GHCND:USC00280907</td>
+<td>11.4</td>
+<td>28.3</td>
+<td>23.3</td>
+</tr>
+<tr>
+<th>430</th>
+<td>2018-07-26</td>
+<td>?</td>
+<td>5.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>431</th>
+<td>2018-07-26</td>
+<td>GHCND:USC00280907</td>
+<td>24.9</td>
+<td>27.2</td>
+<td>21.7</td>
+</tr>
+<tr>
+<th>432</th>
+<td>2018-07-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>31.1</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>433</th>
+<td>2018-07-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>31.1</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>434</th>
+<td>2018-07-28</td>
+<td>?</td>
+<td>14.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>435</th>
+<td>2018-07-28</td>
+<td>?</td>
+<td>14.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>436</th>
+<td>2018-07-28</td>
+<td>?</td>
+<td>14.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>437</th>
+<td>2018-07-28</td>
+<td>?</td>
+<td>14.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>438</th>
+<td>2018-07-28</td>
+<td>GHCND:USC00280907</td>
+<td>23.4</td>
+<td>30.0</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>439</th>
+<td>2018-07-29</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>29.4</td>
+<td>18.9</td>
+</tr>
+<tr>
+<th>440</th>
+<td>2018-07-29</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>29.4</td>
+<td>18.9</td>
+</tr>
+<tr>
+<th>441</th>
+<td>2018-07-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>442</th>
+<td>2018-07-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>443</th>
+<td>2018-07-30</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>29.4</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>444</th>
+<td>2018-07-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>25.6</td>
+<td>16.1</td>
+</tr>
+<tr>
+<th>445</th>
+<td>2018-08-01</td>
+<td>?</td>
+<td>4.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>446</th>
+<td>2018-08-01</td>
+<td>?</td>
+<td>4.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>447</th>
+<td>2018-08-01</td>
+<td>?</td>
+<td>4.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>448</th>
+<td>2018-08-01</td>
+<td>?</td>
+<td>4.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>449</th>
+<td>2018-08-01</td>
+<td>GHCND:USC00280907</td>
+<td>0.3</td>
+<td>28.3</td>
+<td>20.0</td>
+</tr>
+<tr>
+<th>450</th>
+<td>2018-08-02</td>
+<td>GHCND:USC00280907</td>
+<td>17.5</td>
+<td>30.0</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>451</th>
+<td>2018-08-02</td>
+<td>GHCND:USC00280907</td>
+<td>17.5</td>
+<td>30.0</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>452</th>
+<td>2018-08-03</td>
+<td>?</td>
+<td>2.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>453</th>
+<td>2018-08-03</td>
+<td>GHCND:USC00280907</td>
+<td>34.5</td>
+<td>30.0</td>
+<td>21.7</td>
+</tr>
+<tr>
+<th>454</th>
+<td>2018-08-04</td>
+<td>GHCND:USC00280907</td>
+<td>50.5</td>
+<td>30.6</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>455</th>
+<td>2018-08-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>456</th>
+<td>2018-08-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>33.3</td>
+<td>21.7</td>
+</tr>
+<tr>
+<th>457</th>
+<td>2018-08-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>458</th>
+<td>2018-08-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>459</th>
+<td>2018-08-08</td>
+<td>?</td>
+<td>3.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>460</th>
+<td>2018-08-08</td>
+<td>?</td>
+<td>3.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>461</th>
+<td>2018-08-09</td>
+<td>?</td>
+<td>41.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>462</th>
+<td>2018-08-09</td>
+<td>?</td>
+<td>41.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>463</th>
+<td>2018-08-09</td>
+<td>?</td>
+<td>41.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>464</th>
+<td>2018-08-09</td>
+<td>?</td>
+<td>41.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>465</th>
+<td>2018-08-09</td>
+<td>GHCND:USC00280907</td>
+<td>9.9</td>
+<td>32.8</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>466</th>
+<td>2018-08-09</td>
+<td>GHCND:USC00280907</td>
+<td>9.9</td>
+<td>32.8</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>467</th>
+<td>2018-08-09</td>
+<td>GHCND:USC00280907</td>
+<td>9.9</td>
+<td>32.8</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>468</th>
+<td>2018-08-10</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>469</th>
+<td>2018-08-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>30.6</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>470</th>
+<td>2018-08-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>30.6</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>471</th>
+<td>2018-08-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>30.6</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>472</th>
+<td>2018-08-11</td>
+<td>GHCND:USC00280907</td>
+<td>0.3</td>
+<td>30.6</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>473</th>
+<td>2018-08-11</td>
+<td>GHCND:USC00280907</td>
+<td>0.3</td>
+<td>30.6</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>474</th>
+<td>2018-08-13</td>
+<td>GHCND:USC00280907</td>
+<td>2.3</td>
+<td>28.3</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>475</th>
+<td>2018-08-13</td>
+<td>GHCND:USC00280907</td>
+<td>2.3</td>
+<td>28.3</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>476</th>
+<td>2018-08-14</td>
+<td>GHCND:USC00280907</td>
+<td>11.9</td>
+<td>22.8</td>
+<td>20.0</td>
+</tr>
+<tr>
+<th>477</th>
+<td>2018-08-14</td>
+<td>GHCND:USC00280907</td>
+<td>11.9</td>
+<td>22.8</td>
+<td>20.0</td>
+</tr>
+<tr>
+<th>478</th>
+<td>2018-08-14</td>
+<td>GHCND:USC00280907</td>
+<td>11.9</td>
+<td>22.8</td>
+<td>20.0</td>
+</tr>
+<tr>
+<th>479</th>
+<td>2018-08-15</td>
+<td>GHCND:USC00280907</td>
+<td>7.4</td>
+<td>26.7</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>480</th>
+<td>2018-08-17</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>31.7</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>481</th>
+<td>2018-08-18</td>
+<td>GHCND:USC00280907</td>
+<td>32.5</td>
+<td>31.7</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>482</th>
+<td>2018-08-18</td>
+<td>GHCND:USC00280907</td>
+<td>32.5</td>
+<td>31.7</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>483</th>
+<td>2018-08-18</td>
+<td>GHCND:USC00280907</td>
+<td>32.5</td>
+<td>31.7</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>484</th>
+<td>2018-08-19</td>
+<td>GHCND:USC00280907</td>
+<td>13.0</td>
+<td>30.0</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>485</th>
+<td>2018-08-19</td>
+<td>GHCND:USC00280907</td>
+<td>13.0</td>
+<td>30.0</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>486</th>
+<td>2018-08-19</td>
+<td>?</td>
+<td>3.6</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>487</th>
+<td>2018-08-19</td>
+<td>GHCND:USC00280907</td>
+<td>13.0</td>
+<td>30.0</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>488</th>
+<td>2018-08-20</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>22.2</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>489</th>
+<td>2018-08-20</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>490</th>
+<td>2018-08-20</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>491</th>
+<td>2018-08-21</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>23.3</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>492</th>
+<td>2018-08-22</td>
+<td>GHCND:USC00280907</td>
+<td>19.8</td>
+<td>25.6</td>
+<td>17.8</td>
+</tr>
+<tr>
+<th>493</th>
+<td>2018-08-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.5</td>
+<td>28.9</td>
+<td>17.8</td>
+</tr>
+<tr>
+<th>494</th>
+<td>2018-08-23</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>495</th>
+<td>2018-08-24</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>24.4</td>
+<td>13.3</td>
+</tr>
+<tr>
+<th>496</th>
+<td>2018-08-24</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>497</th>
+<td>2018-08-24</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>498</th>
+<td>2018-08-25</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>28.3</td>
+<td>13.3</td>
+</tr>
+<tr>
+<th>499</th>
+<td>2018-08-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>500</th>
+<td>2018-08-26</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>501</th>
+<td>2018-08-26</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>502</th>
+<td>2018-08-27</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>503</th>
+<td>2018-08-28</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>504</th>
+<td>2018-08-28</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>505</th>
+<td>2018-08-29</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>33.9</td>
+<td>22.8</td>
+</tr>
+<tr>
+<th>506</th>
+<td>2018-08-29</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>33.9</td>
+<td>22.8</td>
+</tr>
+<tr>
+<th>507</th>
+<td>2018-08-29</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>508</th>
+<td>2018-08-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>509</th>
+<td>2018-08-30</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>33.3</td>
+<td>23.9</td>
+</tr>
+<tr>
+<th>510</th>
+<td>2018-08-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>33.3</td>
+<td>21.1</td>
+</tr>
+<tr>
+<th>511</th>
+<td>2018-09-01</td>
+<td>?</td>
+<td>5.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>512</th>
+<td>2018-09-01</td>
+<td>?</td>
+<td>5.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>513</th>
+<td>2018-09-01</td>
+<td>GHCND:USC00280907</td>
+<td>32.5</td>
+<td>22.2</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>514</th>
+<td>2018-09-01</td>
+<td>GHCND:USC00280907</td>
+<td>32.5</td>
+<td>22.2</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>515</th>
+<td>2018-09-01</td>
+<td>?</td>
+<td>5.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>516</th>
+<td>2018-09-01</td>
+<td>GHCND:USC00280907</td>
+<td>32.5</td>
+<td>22.2</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>517</th>
+<td>2018-09-02</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>518</th>
+<td>2018-09-02</td>
+<td>GHCND:USC00280907</td>
+<td>0.3</td>
+<td>25.6</td>
+<td>16.7</td>
+</tr>
+<tr>
+<th>519</th>
+<td>2018-09-02</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>520</th>
+<td>2018-09-02</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>521</th>
+<td>2018-09-03</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>522</th>
+<td>2018-09-03</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>28.3</td>
+<td>17.8</td>
+</tr>
+<tr>
+<th>523</th>
+<td>2018-09-03</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>524</th>
+<td>2018-09-04</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>525</th>
+<td>2018-09-04</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.8</td>
+<td>21.7</td>
+</tr>
+<tr>
+<th>526</th>
+<td>2018-09-04</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>527</th>
+<td>2018-09-05</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>32.8</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>528</th>
+<td>2018-09-05</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>529</th>
+<td>2018-09-07</td>
+<td>GHCND:USC00280907</td>
+<td>15.7</td>
+<td>34.4</td>
+<td>21.7</td>
+</tr>
+<tr>
+<th>530</th>
+<td>2018-09-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>531</th>
+<td>2018-09-09</td>
+<td>GHCND:USC00280907</td>
+<td>2.8</td>
+<td>19.4</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>532</th>
+<td>2018-09-10</td>
+<td>?</td>
+<td>23.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>533</th>
+<td>2018-09-10</td>
+<td>GHCND:USC00280907</td>
+<td>26.4</td>
+<td>13.9</td>
+<td>10.6</td>
+</tr>
+<tr>
+<th>534</th>
+<td>2018-09-10</td>
+<td>?</td>
+<td>23.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>535</th>
+<td>2018-09-11</td>
+<td>?</td>
+<td>12.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>536</th>
+<td>2018-09-12</td>
+<td>?</td>
+<td>0.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>537</th>
+<td>2018-09-12</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>22.8</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>538</th>
+<td>2018-09-12</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>22.8</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>539</th>
+<td>2018-09-12</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>22.8</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>540</th>
+<td>2018-09-13</td>
+<td>?</td>
+<td>5.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>541</th>
+<td>2018-09-13</td>
+<td>GHCND:USC00280907</td>
+<td>4.3</td>
+<td>24.4</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>542</th>
+<td>2018-09-13</td>
+<td>GHCND:USC00280907</td>
+<td>4.3</td>
+<td>24.4</td>
+<td>20.6</td>
+</tr>
+<tr>
+<th>543</th>
+<td>2018-09-13</td>
+<td>?</td>
+<td>5.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>544</th>
+<td>2018-09-14</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>545</th>
+<td>2018-09-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>25.0</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>546</th>
+<td>2018-09-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>25.0</td>
+<td>19.4</td>
+</tr>
+<tr>
+<th>547</th>
+<td>2018-09-16</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>27.2</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>548</th>
+<td>2018-09-17</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>30.0</td>
+<td>16.7</td>
+</tr>
+<tr>
+<th>549</th>
+<td>2018-09-19</td>
+<td>GHCND:USC00280907</td>
+<td>3.3</td>
+<td>26.1</td>
+<td>17.8</td>
+</tr>
+<tr>
+<th>550</th>
+<td>2018-09-19</td>
+<td>GHCND:USC00280907</td>
+<td>3.3</td>
+<td>26.1</td>
+<td>17.8</td>
+</tr>
+<tr>
+<th>551</th>
+<td>2018-09-20</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>28.3</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>552</th>
+<td>2018-09-21</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>553</th>
+<td>2018-09-21</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>21.1</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>554</th>
+<td>2018-09-21</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>21.1</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>555</th>
+<td>2018-09-22</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>556</th>
+<td>2018-09-22</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>23.3</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>557</th>
+<td>2018-09-22</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>23.3</td>
+<td>18.3</td>
+</tr>
+<tr>
+<th>558</th>
+<td>2018-09-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>21.7</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>559</th>
+<td>2018-09-23</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>560</th>
+<td>2018-09-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>21.7</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>561</th>
+<td>2018-09-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>21.7</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>562</th>
+<td>2018-09-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>21.7</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>563</th>
+<td>2018-09-24</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>18.3</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>564</th>
+<td>2018-09-24</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>565</th>
+<td>2018-09-25</td>
+<td>?</td>
+<td>14.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>566</th>
+<td>2018-09-25</td>
+<td>?</td>
+<td>14.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>567</th>
+<td>2018-09-26</td>
+<td>GHCND:USC00280907</td>
+<td>61.7</td>
+<td>19.4</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>568</th>
+<td>2018-09-27</td>
+<td>GHCND:USC00280907</td>
+<td>2.3</td>
+<td>27.2</td>
+<td>14.4</td>
+</tr>
+<tr>
+<th>569</th>
+<td>2018-09-27</td>
+<td>GHCND:USC00280907</td>
+<td>2.3</td>
+<td>27.2</td>
+<td>14.4</td>
+</tr>
+<tr>
+<th>570</th>
+<td>2018-09-28</td>
+<td>?</td>
+<td>29.2</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>571</th>
+<td>2018-09-28</td>
+<td>GHCND:USC00280907</td>
+<td>29.5</td>
+<td>21.1</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>572</th>
+<td>2018-09-28</td>
+<td>GHCND:USC00280907</td>
+<td>29.5</td>
+<td>21.1</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>573</th>
+<td>2018-09-28</td>
+<td>?</td>
+<td>29.2</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>574</th>
+<td>2018-09-30</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>22.2</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>575</th>
+<td>2018-10-01</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>21.1</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>576</th>
+<td>2018-10-02</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>23.9</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>577</th>
+<td>2018-10-02</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>23.9</td>
+<td>13.9</td>
+</tr>
+<tr>
+<th>578</th>
+<td>2018-10-03</td>
+<td>GHCND:USC00280907</td>
+<td>19.6</td>
+<td>25.0</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>579</th>
+<td>2018-10-03</td>
+<td>GHCND:USC00280907</td>
+<td>19.6</td>
+<td>25.0</td>
+<td>15.6</td>
+</tr>
+<tr>
+<th>580</th>
+<td>2018-10-04</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>22.8</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>581</th>
+<td>2018-10-04</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>22.8</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>582</th>
+<td>2018-10-04</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>22.8</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>583</th>
+<td>2018-10-04</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>584</th>
+<td>2018-10-04</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>22.8</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>585</th>
+<td>2018-10-05</td>
+<td>GHCND:USC00280907</td>
+<td>4.6</td>
+<td>23.3</td>
+<td>11.7</td>
+</tr>
+<tr>
+<th>586</th>
+<td>2018-10-08</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>587</th>
+<td>2018-10-08</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>26.7</td>
+<td>17.8</td>
+</tr>
+<tr>
+<th>588</th>
+<td>2018-10-09</td>
+<td>GHCND:USC00280907</td>
+<td>2.5</td>
+<td>18.9</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>589</th>
+<td>2018-10-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.8</td>
+<td>24.4</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>590</th>
+<td>2018-10-10</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>591</th>
+<td>2018-10-10</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>592</th>
+<td>2018-10-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.8</td>
+<td>24.4</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>593</th>
+<td>2018-10-10</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>594</th>
+<td>2018-10-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.8</td>
+<td>24.4</td>
+<td>17.2</td>
+</tr>
+<tr>
+<th>595</th>
+<td>2018-10-11</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>596</th>
+<td>2018-10-12</td>
+<td>GHCND:USC00280907</td>
+<td>27.9</td>
+<td>22.8</td>
+<td>14.4</td>
+</tr>
+<tr>
+<th>597</th>
+<td>2018-10-12</td>
+<td>?</td>
+<td>25.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>598</th>
+<td>2018-10-12</td>
+<td>GHCND:USC00280907</td>
+<td>27.9</td>
+<td>22.8</td>
+<td>14.4</td>
+</tr>
+<tr>
+<th>599</th>
+<td>2018-10-12</td>
+<td>?</td>
+<td>25.7</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>600</th>
+<td>2018-10-12</td>
+<td>GHCND:USC00280907</td>
+<td>27.9</td>
+<td>22.8</td>
+<td>14.4</td>
+</tr>
+<tr>
+<th>601</th>
+<td>2018-10-13</td>
+<td>?</td>
+<td>2.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>602</th>
+<td>2018-10-14</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>603</th>
+<td>2018-10-14</td>
+<td>GHCND:USC00280907</td>
+<td>2.8</td>
+<td>13.3</td>
+<td>5.6</td>
+</tr>
+<tr>
+<th>604</th>
+<td>2018-10-14</td>
+<td>GHCND:USC00280907</td>
+<td>2.8</td>
+<td>13.3</td>
+<td>5.6</td>
+</tr>
+<tr>
+<th>605</th>
+<td>2018-10-15</td>
+<td>GHCND:USC00280907</td>
+<td>1.5</td>
+<td>13.3</td>
+<td>6.7</td>
+</tr>
+<tr>
+<th>606</th>
+<td>2018-10-15</td>
+<td>GHCND:USC00280907</td>
+<td>1.5</td>
+<td>13.3</td>
+<td>6.7</td>
+</tr>
+<tr>
+<th>607</th>
+<td>2018-10-15</td>
+<td>GHCND:USC00280907</td>
+<td>1.5</td>
+<td>13.3</td>
+<td>6.7</td>
+</tr>
+<tr>
+<th>608</th>
+<td>2018-10-15</td>
+<td>GHCND:USC00280907</td>
+<td>1.5</td>
+<td>13.3</td>
+<td>6.7</td>
+</tr>
+<tr>
+<th>609</th>
+<td>2018-10-16</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>610</th>
+<td>2018-10-18</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>16.1</td>
+<td>4.4</td>
+</tr>
+<tr>
+<th>611</th>
+<td>2018-10-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>612</th>
+<td>2018-10-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>613</th>
+<td>2018-10-19</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>10.0</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>614</th>
+<td>2018-10-20</td>
+<td>GHCND:USC00280907</td>
+<td>0.5</td>
+<td>15.0</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>615</th>
+<td>2018-10-20</td>
+<td>?</td>
+<td>1.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>616</th>
+<td>2018-10-21</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>16.7</td>
+<td>7.8</td>
+</tr>
+<tr>
+<th>617</th>
+<td>2018-10-21</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>16.7</td>
+<td>7.8</td>
+</tr>
+<tr>
+<th>618</th>
+<td>2018-10-21</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>16.7</td>
+<td>7.8</td>
+</tr>
+<tr>
+<th>619</th>
+<td>2018-10-22</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>7.8</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>620</th>
+<td>2018-10-23</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>15.6</td>
+<td>-1.1</td>
+</tr>
+<tr>
+<th>621</th>
+<td>2018-10-23</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>622</th>
+<td>2018-10-24</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>16.7</td>
+<td>4.4</td>
+</tr>
+<tr>
+<th>623</th>
+<td>2018-10-25</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>11.7</td>
+<td>2.8</td>
+</tr>
+<tr>
+<th>624</th>
+<td>2018-10-25</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>11.7</td>
+<td>2.8</td>
+</tr>
+<tr>
+<th>625</th>
+<td>2018-10-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>9.4</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>626</th>
+<td>2018-10-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>9.4</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>627</th>
+<td>2018-10-27</td>
+<td>?</td>
+<td>13.2</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>628</th>
+<td>2018-10-27</td>
+<td>GHCND:USC00280907</td>
+<td>11.9</td>
+<td>8.9</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>629</th>
+<td>2018-10-27</td>
+<td>?</td>
+<td>13.2</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>630</th>
+<td>2018-10-28</td>
+<td>?</td>
+<td>25.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>631</th>
+<td>2018-10-28</td>
+<td>GHCND:USC00280907</td>
+<td>11.2</td>
+<td>8.3</td>
+<td>5.0</td>
+</tr>
+<tr>
+<th>632</th>
+<td>2018-10-28</td>
+<td>?</td>
+<td>25.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>633</th>
+<td>2018-10-28</td>
+<td>GHCND:USC00280907</td>
+<td>11.2</td>
+<td>8.3</td>
+<td>5.0</td>
+</tr>
+<tr>
+<th>634</th>
+<td>2018-10-28</td>
+<td>?</td>
+<td>25.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>635</th>
+<td>2018-10-28</td>
+<td>?</td>
+<td>25.9</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>636</th>
+<td>2018-10-29</td>
+<td>GHCND:USC00280907</td>
+<td>3.3</td>
+<td>10.6</td>
+<td>6.7</td>
+</tr>
+<tr>
+<th>637</th>
+<td>2018-10-29</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>638</th>
+<td>2018-10-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>639</th>
+<td>2018-10-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>12.2</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>640</th>
+<td>2018-10-31</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>641</th>
+<td>2018-11-02</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>21.1</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>642</th>
+<td>2018-11-02</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>21.1</td>
+<td>8.9</td>
+</tr>
+<tr>
+<th>643</th>
+<td>2018-11-03</td>
+<td>?</td>
+<td>17.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>644</th>
+<td>2018-11-03</td>
+<td>?</td>
+<td>17.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>645</th>
+<td>2018-11-03</td>
+<td>GHCND:USC00280907</td>
+<td>43.9</td>
+<td>21.7</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>646</th>
+<td>2018-11-03</td>
+<td>GHCND:USC00280907</td>
+<td>43.9</td>
+<td>21.7</td>
+<td>12.8</td>
+</tr>
+<tr>
+<th>647</th>
+<td>2018-11-04</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>13.3</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>648</th>
+<td>2018-11-04</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>649</th>
+<td>2018-11-04</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>650</th>
+<td>2018-11-04</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>13.3</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>651</th>
+<td>2018-11-04</td>
+<td>GHCND:USC00280907</td>
+<td>1.0</td>
+<td>13.3</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>652</th>
+<td>2018-11-05</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>653</th>
+<td>2018-11-05</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>654</th>
+<td>2018-11-06</td>
+<td>GHCND:USC00280907</td>
+<td>7.6</td>
+<td>10.6</td>
+<td>7.2</td>
+</tr>
+<tr>
+<th>655</th>
+<td>2018-11-06</td>
+<td>GHCND:USC00280907</td>
+<td>7.6</td>
+<td>10.6</td>
+<td>7.2</td>
+</tr>
+<tr>
+<th>656</th>
+<td>2018-11-06</td>
+<td>GHCND:USC00280907</td>
+<td>7.6</td>
+<td>10.6</td>
+<td>7.2</td>
+</tr>
+<tr>
+<th>657</th>
+<td>2018-11-07</td>
+<td>?</td>
+<td>20.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>658</th>
+<td>2018-11-07</td>
+<td>GHCND:USC00280907</td>
+<td>14.2</td>
+<td>13.3</td>
+<td>6.1</td>
+</tr>
+<tr>
+<th>659</th>
+<td>2018-11-07</td>
+<td>?</td>
+<td>20.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>660</th>
+<td>2018-11-07</td>
+<td>?</td>
+<td>20.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>661</th>
+<td>2018-11-10</td>
+<td>GHCND:USC00280907</td>
+<td>17.0</td>
+<td>8.3</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>662</th>
+<td>2018-11-10</td>
+<td>GHCND:USC00280907</td>
+<td>17.0</td>
+<td>8.3</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>663</th>
+<td>2018-11-10</td>
+<td>GHCND:USC00280907</td>
+<td>17.0</td>
+<td>8.3</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>664</th>
+<td>2018-11-10</td>
+<td>GHCND:USC00280907</td>
+<td>17.0</td>
+<td>8.3</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>665</th>
+<td>2018-11-11</td>
+<td>?</td>
+<td>0.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>666</th>
+<td>2018-11-12</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>7.2</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>667</th>
+<td>2018-11-12</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>668</th>
+<td>2018-11-12</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>7.2</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>669</th>
+<td>2018-11-13</td>
+<td>?</td>
+<td>25.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>670</th>
+<td>2018-11-14</td>
+<td>GHCND:USC00280907</td>
+<td>10.7</td>
+<td>8.9</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>671</th>
+<td>2018-11-14</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>672</th>
+<td>2018-11-14</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>673</th>
+<td>2018-11-14</td>
+<td>GHCND:USC00280907</td>
+<td>10.7</td>
+<td>8.9</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>674</th>
+<td>2018-11-14</td>
+<td>?</td>
+<td>1.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>675</th>
+<td>2018-11-15</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>676</th>
+<td>2018-11-15</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>677</th>
+<td>2018-11-15</td>
+<td>GHCND:USC00280907</td>
+<td>0.3</td>
+<td>3.3</td>
+<td>-2.8</td>
+</tr>
+<tr>
+<th>678</th>
+<td>2018-11-16</td>
+<td>?</td>
+<td>47.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>679</th>
+<td>2018-11-16</td>
+<td>?</td>
+<td>47.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>680</th>
+<td>2018-11-16</td>
+<td>?</td>
+<td>47.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>681</th>
+<td>2018-11-17</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>682</th>
+<td>2018-11-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>683</th>
+<td>2018-11-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>684</th>
+<td>2018-11-19</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>685</th>
+<td>2018-11-19</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>4.4</td>
+<td>1.7</td>
+</tr>
+<tr>
+<th>686</th>
+<td>2018-11-20</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>687</th>
+<td>2018-11-20</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>9.4</td>
+<td>2.8</td>
+</tr>
+<tr>
+<th>688</th>
+<td>2018-11-20</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>689</th>
+<td>2018-11-21</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>690</th>
+<td>2018-11-24</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>691</th>
+<td>2018-11-24</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>-1.1</td>
+<td>-12.2</td>
+</tr>
+<tr>
+<th>692</th>
+<td>2018-11-25</td>
+<td>GHCND:USC00280907</td>
+<td>41.1</td>
+<td>7.8</td>
+<td>-5.0</td>
+</tr>
+<tr>
+<th>693</th>
+<td>2018-11-25</td>
+<td>?</td>
+<td>38.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>694</th>
+<td>2018-11-26</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>12.2</td>
+<td>2.8</td>
+</tr>
+<tr>
+<th>695</th>
+<td>2018-11-27</td>
+<td>GHCND:USC00280907</td>
+<td>24.9</td>
+<td>10.0</td>
+<td>3.9</td>
+</tr>
+<tr>
+<th>696</th>
+<td>2018-11-27</td>
+<td>GHCND:USC00280907</td>
+<td>24.9</td>
+<td>10.0</td>
+<td>3.9</td>
+</tr>
+<tr>
+<th>697</th>
+<td>2018-11-28</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>1.1</td>
+</tr>
+<tr>
+<th>698</th>
+<td>2018-11-29</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>4.4</td>
+<td>0.6</td>
+</tr>
+<tr>
+<th>699</th>
+<td>2018-11-30</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>0.6</td>
+</tr>
+<tr>
+<th>700</th>
+<td>2018-11-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>701</th>
+<td>2018-11-30</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.1</td>
+<td>0.6</td>
+</tr>
+<tr>
+<th>702</th>
+<td>2018-12-01</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>4.4</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>703</th>
+<td>2018-12-01</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>4.4</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>704</th>
+<td>2018-12-01</td>
+<td>GHCND:USC00280907</td>
+<td>1.3</td>
+<td>4.4</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>705</th>
+<td>2018-12-01</td>
+<td>?</td>
+<td>0.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>706</th>
+<td>2018-12-03</td>
+<td>GHCND:USC00280907</td>
+<td>6.6</td>
+<td>10.6</td>
+<td>5.6</td>
+</tr>
+<tr>
+<th>707</th>
+<td>2018-12-05</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.9</td>
+<td>-6.7</td>
+</tr>
+<tr>
+<th>708</th>
+<td>2018-12-05</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.9</td>
+<td>-6.7</td>
+</tr>
+<tr>
+<th>709</th>
+<td>2018-12-06</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.2</td>
+<td>-6.7</td>
+</tr>
+<tr>
+<th>710</th>
+<td>2018-12-06</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>711</th>
+<td>2018-12-07</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.3</td>
+<td>-2.8</td>
+</tr>
+<tr>
+<th>712</th>
+<td>2018-12-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>713</th>
+<td>2018-12-07</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>714</th>
+<td>2018-12-08</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.2</td>
+<td>-8.3</td>
+</tr>
+<tr>
+<th>715</th>
+<td>2018-12-08</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>716</th>
+<td>2018-12-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>717</th>
+<td>2018-12-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>718</th>
+<td>2018-12-09</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>719</th>
+<td>2018-12-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.6</td>
+<td>-6.1</td>
+</tr>
+<tr>
+<th>720</th>
+<td>2018-12-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.6</td>
+<td>-6.1</td>
+</tr>
+<tr>
+<th>721</th>
+<td>2018-12-10</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>0.6</td>
+<td>-6.1</td>
+</tr>
+<tr>
+<th>722</th>
+<td>2018-12-11</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>723</th>
+<td>2018-12-12</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.3</td>
+<td>-7.8</td>
+</tr>
+<tr>
+<th>724</th>
+<td>2018-12-12</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.3</td>
+<td>-7.8</td>
+</tr>
+<tr>
+<th>725</th>
+<td>2018-12-13</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>8.3</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>726</th>
+<td>2018-12-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.8</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>727</th>
+<td>2018-12-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.8</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>728</th>
+<td>2018-12-14</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>2.8</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>729</th>
+<td>2018-12-15</td>
+<td>?</td>
+<td>5.8</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>730</th>
+<td>2018-12-16</td>
+<td>?</td>
+<td>19.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>731</th>
+<td>2018-12-16</td>
+<td>?</td>
+<td>19.1</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>732</th>
+<td>2018-12-16</td>
+<td>GHCND:USC00280907</td>
+<td>23.9</td>
+<td>10.0</td>
+<td>2.2</td>
+</tr>
+<tr>
+<th>733</th>
+<td>2018-12-17</td>
+<td>GHCND:USC00280907</td>
+<td>25.4</td>
+<td>7.2</td>
+<td>2.8</td>
+</tr>
+<tr>
+<th>734</th>
+<td>2018-12-18</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>6.7</td>
+<td>-0.6</td>
+</tr>
+<tr>
+<th>735</th>
+<td>2018-12-20</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>-5.6</td>
+</tr>
+<tr>
+<th>736</th>
+<td>2018-12-20</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.0</td>
+<td>-5.6</td>
+</tr>
+<tr>
+<th>737</th>
+<td>2018-12-21</td>
+<td>GHCND:USC00280907</td>
+<td>42.9</td>
+<td>14.4</td>
+<td>-4.4</td>
+</tr>
+<tr>
+<th>738</th>
+<td>2018-12-22</td>
+<td>GHCND:USC00280907</td>
+<td>12.2</td>
+<td>16.1</td>
+<td>6.7</td>
+</tr>
+<tr>
+<th>739</th>
+<td>2018-12-23</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>740</th>
+<td>2018-12-23</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>741</th>
+<td>2018-12-23</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>742</th>
+<td>2018-12-24</td>
+<td>?</td>
+<td>1.5</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>743</th>
+<td>2018-12-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>744</th>
+<td>2018-12-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>745</th>
+<td>2018-12-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>746</th>
+<td>2018-12-25</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>747</th>
+<td>2018-12-26</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>748</th>
+<td>2018-12-26</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>749</th>
+<td>2018-12-26</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>750</th>
+<td>2018-12-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-2.2</td>
+</tr>
+<tr>
+<th>751</th>
+<td>2018-12-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-2.2</td>
+</tr>
+<tr>
+<th>752</th>
+<td>2018-12-27</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>5.6</td>
+<td>-2.2</td>
+</tr>
+<tr>
+<th>753</th>
+<td>2018-12-27</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>754</th>
+<td>2018-12-28</td>
+<td>?</td>
+<td>11.4</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>755</th>
+<td>2018-12-28</td>
+<td>GHCND:USC00280907</td>
+<td>11.7</td>
+<td>6.1</td>
+<td>-1.7</td>
+</tr>
+<tr>
+<th>756</th>
+<td>2018-12-28</td>
+<td>?</td>
+<td>11.4</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>757</th>
+<td>2018-12-29</td>
+<td>?</td>
+<td>21.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>758</th>
+<td>2018-12-29</td>
+<td>?</td>
+<td>21.3</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>759</th>
+<td>2018-12-30</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>760</th>
+<td>2018-12-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.3</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>761</th>
+<td>2018-12-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.3</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>762</th>
+<td>2018-12-31</td>
+<td>GHCND:USC00280907</td>
+<td>0.0</td>
+<td>3.3</td>
+<td>-3.3</td>
+</tr>
+<tr>
+<th>763</th>
+<td>2018-12-31</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+<tr>
+<th>764</th>
+<td>2018-12-31</td>
+<td>?</td>
+<td>0.0</td>
+<td>5505.0</td>
+<td>-40.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+
+<script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math, .d2l-element, .d2l-cplus-layout') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
+							const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
+							elm.replaceWith(mrow);
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							outputScale: 1.5,
+							renderLatex: false,
+							enableMML3Support: false
+						});
+					}
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code, false);
+					});
+				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2026.3.233/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
+					window.D2L.EmbedRenderer.renderEmbeds(document.body);
+				});</script></body></html>
